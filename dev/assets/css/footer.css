@@ -1,0 +1,26 @@
+.footer {}
+
+
+.footer__wrapper {
+    display: flex;
+}
+
+.footer__contacts {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    width: min(25%, 350px);
+}
+
+.footer__contacts a {
+    width: max-content;
+}
+
+.footer__menu-wrapper {
+    flex: 0 1 66%;
+    margin-left: auto;
+    letter-spacing: -0.5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

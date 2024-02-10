@@ -1,0 +1,74 @@
+.bg {
+    background: var(--body-bg);
+    color: var(--body-color);
+}
+
+a:not(.not-effect) {
+    transition: all 0.25s ease;
+    text-underline-offset: 0.15em;
+    color: inherit;
+    position: relative;
+}
+
+a:not(.not-effect)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: clamp(0px, 0.15em, 4.5px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    opacity: .25;
+    pointer-events: none;
+}
+
+a:not(.not-effect):after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right;
+    background: currentColor;
+}
+
+a:not(.not-effect):hover {
+    outline: 0;
+}
+
+a:not(.not-effect):hover::after {
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    text-align: center;
+    border-radius: 50px;
+    background: var(--body-color);
+    color: var(--body-bg);
+    font-weight: 700;
+    transform: scale(1);
+    transition: transform 0.25s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}

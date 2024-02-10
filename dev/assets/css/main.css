@@ -1,0 +1,33 @@
+body {
+    font-family: var(--font-family);
+    color: var(--body-color);
+    background: var(--body-bg);
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+@media(min-width: 1280px) {
+    .container {
+        max-width: 1240px;
+    }
+}
+
+@media(min-width: 1500px) {
+    .container {
+        max-width: 1520px;
+    }
+}
+
+
+
+main {
+    padding-top: 160px;
+}
+
+.section {
+    padding: 50px 0;
+}
