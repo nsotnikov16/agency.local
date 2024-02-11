@@ -22,4 +22,26 @@ function handlerScroll() {
     prevScroll = window.scrollY;
 }
 
+
+function lazyLoad() {
+    const lazyImages = document.querySelectorAll('[data-lazy-src]')
+    if (!lazyImages.length) return;
+    lazyImages.forEach(img => {
+        //img.setAttribute('src', '/dev/assets/images/load.gif');
+        function showImg() {
+            const { top } = img.getBoundingClientRect();
+            if (top >= window.innerHeight) return;
+            const src = img.getAttribute('data-lazy-src');
+            if (!src) return;
+            img.setAttribute('src', src)
+            img.removeAttribute('data-lazy-src');
+            document.removeEventListener('scroll', showImg);
+        }
+        showImg()
+        window.addEventListener('scroll', showImg)
+    })
+}
+
+lazyLoad();
+
 window.addEventListener('scroll', handlerScroll);

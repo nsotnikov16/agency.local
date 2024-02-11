@@ -3,6 +3,7 @@ body {
     color: var(--body-color);
     background: var(--body-bg);
     transition: background 0.25s ease-out;
+    overflow-x: hidden;
 }
 
 .container {
@@ -23,12 +24,17 @@ body {
     }
 }
 
-
-
 main {
     padding-top: 160px;
 }
 
 .section {
     padding: 50px 0;
+}
+
+.section__title {
+    font-size: 55px;
+    margin-bottom: 50px;
+    line-height: 1.11;
+    letter-spacing: -0.025em;
 }

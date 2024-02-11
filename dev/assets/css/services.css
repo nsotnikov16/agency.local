@@ -1,0 +1,31 @@
+.services {}
+
+.services__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 2px solid var(--body-color);
+    overflow: hidden;
+}
+
+.service__img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    background: white;
+}
+
+.service__info {
+    padding: 30px 20px;
+}
+
+.service__name {
+    font-size: 23px;
+    font-weight: 500;
+}
