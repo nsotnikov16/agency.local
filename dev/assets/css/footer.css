@@ -17,6 +17,10 @@
     width: max-content;
 }
 
+.footer__social {
+    margin-top: 10px;
+}
+
 .footer__menu-wrapper {
     flex: 0 1 66%;
     margin-left: auto;
@@ -24,3 +28,30 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__nav>* {
+    margin-bottom: 14px;
+    width: max-content;
+}
+
+.footer {
+    font-size: 20px;
+}
+
+.footer__nav>*:last-child {
+    margin-bottom: 0;
+}
+
+.footer__nav-title {
+    font-weight: 700;
+}
+
+a.footer__nav-link::before, .footer__contacts a::before {
+    content: initial
+}
+

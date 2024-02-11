@@ -8,4 +8,4 @@
     <link rel="stylesheet" href="<?= ASSETS_PATH ?>/css/style.css">
 </head>
 
-<body>
+<body style="height: 1600px;">

@@ -1,0 +1,21 @@
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social a {
+    fill: var(--body-color);
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transform: scale(1);
+    transition: all var(--transition-duration) ease-in;
+}
+
+.social a:hover {
+    transform: scale(1.15);
+}
+
+.social a:last-child {
+    margin-right: 0;
+}

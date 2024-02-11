@@ -1,6 +1,5 @@
 header {
-    background: var(--body-bg);
-    color: var(--body-color);
+    background: inherit;
     position: fixed;
     top: 0;
     left: 0;
@@ -10,6 +9,12 @@ header {
     transition: background var(--transition-duration) ease, -webkit-transform var(--transition-duration) ease;
     transition: transform var(--transition-duration) ease, background var(--transition-duration) ease;
     transition: transform var(--transition-duration) ease, background var(--transition-duration) ease, -webkit-transform var(--transition-duration) ease;
+}
+
+.header_hide {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 .header__wrapper {
@@ -29,6 +34,10 @@ header {
     will-change: height;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+
+.header_scrolled .header__wrapper {
+    height: 80px;
 }
 
 .header__nav-link {

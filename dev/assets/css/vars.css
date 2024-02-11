@@ -1,7 +1,12 @@
 html {
     --body-bg: #042825;
     --body-color: #ffffff;
-    --transition-duration: 600ms;
+    --transition-duration: 0.25s;
     --font-family: 'Montserrat';
     --scale: 0.9;
+}
+
+html.bg-2 {
+    --body-color: #042825;
+    --body-bg: #ffffff;
 }
