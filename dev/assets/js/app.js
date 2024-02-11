@@ -10,7 +10,7 @@ function handlerScroll() {
     const scrollProgress = (window.scrollY / contentHeight) * 100;
 
     html.classList.remove('bg-2');
-    if (scrollProgress >= 35) html.classList.add('bg-2');
+    if (scrollProgress >= 15) html.classList.add('bg-2');
 
     if (header) {
         header.classList.remove('header_scrolled');
@@ -30,7 +30,7 @@ function lazyLoad() {
         //img.setAttribute('src', '/dev/assets/images/load.gif');
         function showImg() {
             const { top } = img.getBoundingClientRect();
-            if (top >= window.innerHeight) return;
+            if (top >= window.innerHeight - 100) return;
             const src = img.getAttribute('data-lazy-src');
             if (!src) return;
             img.setAttribute('src', src)

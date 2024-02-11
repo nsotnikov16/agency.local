@@ -16,14 +16,18 @@
     visibility: hidden;
 }
 
-a:not(.not-effect) {
+.m-auto {
+    margin: 0 auto;
+}
+
+a:not(.not-effect), .link:not(.not-effect) {
     transition: all var(--transition-duration) ease;
     text-underline-offset: 0.15em;
     color: inherit;
     position: relative;
 }
 
-a:not(.not-effect)::before {
+a:not(.not-effect)::before, .link:not(.not-effect)::before{
     content: "";
     display: block;
     position: absolute;
@@ -36,7 +40,7 @@ a:not(.not-effect)::before {
     pointer-events: none;
 }
 
-a:not(.not-effect):after {
+a:not(.not-effect)::after, .link:not(.not-effect)::after {
     content: "";
     display: block;
     position: absolute;
@@ -57,11 +61,11 @@ a:not(.not-effect):after {
     background: currentColor;
 }
 
-a:not(.not-effect):hover {
+a:not(.not-effect):hover, .link:not(.not-effect):hover {
     outline: 0;
 }
 
-a:not(.not-effect):hover::after {
+a:not(.not-effect):hover::after, .link:not(.not-effect):hover::after {
     -webkit-transform-origin: left;
     -ms-transform-origin: left;
     transform-origin: left;

@@ -1,0 +1,35 @@
+.projects {}
+
+.projects__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project {
+    padding: 30px;
+    width: 50%;
+    height: fit-content;
+}
+
+@media(min-width: 1025px) {
+    .project:nth-child(3n) {
+        width: 1200px;
+        padding-left: 0;
+    }
+}
+
+.project:hover .project__img {
+    transform: scale(1.04);
+}
+
+.project__img {
+    width: 100%;
+    object-fit: contain;
+    transition: transform var(--transition-duration) ease-out;
+    transform: scale(1);
+}
+
+.project__info {
+    margin-top: 20px;
+    font-size: 38px;
+}
