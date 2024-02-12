@@ -1,3 +1,4 @@
 <script src="<?= ASSETS_PATH ?>/js/svgimage.js"></script>
 <script src="<?= ASSETS_PATH ?>/js/aos.js"></script>
+<script src="<?= ASSETS_PATH ?>/js/swiper-bundle.min.js"></script>
 <script src="<?= ASSETS_PATH ?>/js/app.js"></script>

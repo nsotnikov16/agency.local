@@ -20,6 +20,20 @@
     margin: 0 auto;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+hr {
+    background: var(--body-color);
+    padding: 1px 0 0 0;
+}
+
+
 a:not(.not-effect), .link:not(.not-effect) {
     transition: all var(--transition-duration) ease;
     text-underline-offset: 0.15em;

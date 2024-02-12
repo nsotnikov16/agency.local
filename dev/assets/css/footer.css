@@ -1,7 +1,6 @@
 .footer {
-    padding: 100px 0;
+    padding: 100px 0 50px;
 }
-
 
 .footer__wrapper {
     display: flex;
@@ -28,7 +27,7 @@
     margin-left: auto;
     letter-spacing: -0.5px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .footer__nav {
@@ -57,3 +56,12 @@ a.footer__nav-link::before, .footer__contacts a::before {
     content: initial
 }
 
+.footer__bottom {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.footer__policy {
+    display: inline-block;
+    margin-top: 15px;
+}

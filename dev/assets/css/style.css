@@ -2,11 +2,15 @@
 @import url(vars.css);
 @import url(normalize.css);
 @import url(aos.css);
+@import url(swiper-bundle.min.css);
 @import url(main.css);
 @import url(ui.css);
+@import url(content.css);
 @import url(header.css);
 @import url(footer.css);
 @import url(hero.css);
 @import url(services.css);
 @import url(projects.css);
+@import url(partners.css);
+@import url(lead.css);
 @import url(social.css);

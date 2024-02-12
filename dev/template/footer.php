@@ -1,4 +1,7 @@
 </main>
+
+<? include_once __DIR__ . '/views/partners.php' ?>
+<? include_once __DIR__ . '/views/lead-section.php' ?>
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
@@ -14,30 +17,33 @@
             </div>
             <div class="footer__menu-wrapper">
                 <nav class="footer__nav">
-                    <span class="footer__nav-title">О нас</span>
-                    <a href="" class="footer__nav-link">Home</a>
-                    <a href="" class="footer__nav-link">Work</a>
-                    <a href="" class="footer__nav-link">Services</a>
+                    <span class="footer__nav-title">Что мы делаем</span>
+                    <a href="" class="footer__nav-link">Услуги</a>
+                    <a href="" class="footer__nav-link">Проекты</a>
+                    <a href="" class="footer__nav-link">Работа с клиентом</a>
+                    <a href="" class="footer__nav-link">Технологии</a>
+                    <a href="" class="footer__nav-link">Обучение</a>
+                    <a href="" class="footer__nav-link">Вопрос-ответ</a>
                 </nav>
                 <nav class="footer__nav">
-                    <span class="footer__nav-title">О нас</span>
-                    <a href="" class="footer__nav-link">About</a>
-                    <a href="" class="footer__nav-link">Blog</a>
-                    <a href="" class="footer__nav-link">Test</a>
+                    <span class="footer__nav-title">Кто мы</span>
+                    <a href="" class="footer__nav-link">О нас</a>
+                    <a href="" class="footer__nav-link">Сотрудничество</a>
                 </nav>
                 <nav class="footer__nav">
-                    <span class="footer__nav-title">О нас</span>
-                    <a href="" class="footer__nav-link">Test2</a>
-                    <a href="" class="footer__nav-link">Test3</a>
-                    <a href="" class="footer__nav-link">Test4</a>
-                </nav>
-                <nav class="footer__nav">
-                    <span class="footer__nav-title">О нас</span>
-                    <a href="" class="footer__nav-link">Test5</a>
-                    <a href="" class="footer__nav-link">Test6</a>
-                    <a href="" class="footer__nav-link">Test7</a>
+                    <span class="footer__nav-title">База знаний</span>
+                    <a href="" class="footer__nav-link">CRM</a>
+                    <a href="" class="footer__nav-link">CMS</a>
+                    <a href="" class="footer__nav-link">Хостинг и домен</a>
+                    <a href="" class="footer__nav-link">Виртуальный сервер</a>
+                    <a href="" class="footer__nav-link">Пример оформления ТЗ</a>
                 </nav>
             </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__copyright">© 2024<?= date('Y') === '2024' ? '' : (' - ' . date('Y')) ?>. Все права защищены</div>
+            <a href="" class="footer__policy">Политика конфиденциальности</a>
         </div>
     </div>
 </footer>

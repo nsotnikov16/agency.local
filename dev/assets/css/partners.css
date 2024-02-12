@@ -1,0 +1,30 @@
+.partners {
+
+}
+
+.partner {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.partner__img {
+    width: 100%;
+    fill: var(--body-color);
+    height: 60px;
+}
+
+.partner_goreally .partner__img {
+    transform: translateY(6px);
+}
+
+.partners .swiper-scrollbar {
+    position: static;
+    margin-top: 15px;
+}
+
+
+.partners .swiper-scrollbar-drag {
+    background: var(--body-color);
+}
