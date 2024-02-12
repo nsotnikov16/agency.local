@@ -13,13 +13,13 @@
 
 @media(min-width: 1025px) {
     .project:nth-child(3n) {
-        width: 1200px;
+        width: 800px;
         padding-left: 0;
     }
 }
 
 .project:hover .project__img {
-    transform: scale(1.04);
+    transform: scale(1.02);
 }
 
 .project__img {
@@ -27,6 +27,8 @@
     object-fit: contain;
     transition: transform var(--transition-duration) ease-out;
     transform: scale(1);
+    max-height: 530px;
+    object-position: left;
 }
 
 .project__info {
