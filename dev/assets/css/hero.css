@@ -16,3 +16,11 @@
     max-width: 60%;
     font-weight: 500;
 }
+
+.hero_start .hero__title {
+    font-size: 92px;
+}
+
+.hero_start .hero__subtitle {
+    font-size: 1.7rem
+}

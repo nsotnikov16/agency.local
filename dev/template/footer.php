@@ -1,7 +1,7 @@
 </main>
 
-<? include_once __DIR__ . '/views/partners.php' ?>
-<? include_once __DIR__ . '/views/lead-section.php' ?>
+<? view('partners'); ?>
+<? defined('HIDE_LEAD_SECTION') && HIDE_LEAD_SECTION ? '' : view('lead-section') ?>
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
@@ -47,8 +47,7 @@
         </div>
     </div>
 </footer>
-
-<? require_once __DIR__ . '/scripts.php' ?>
+<? include_once __DIR__ . '/scripts.php' ?>
 </body>
 
 </html>

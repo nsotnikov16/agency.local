@@ -2,9 +2,10 @@
     <div class="container">
         <h2 class="section__title" data-aos="fade-right">Выполненные проекты</h2>
         <ul class="projects__list">
-            <li class="project" data-aos="zoom-in" data-aos-duration="2000">
+            <li class="project project_easygoenglish" data-aos="zoom-in" data-aos-duration="2000">
                 <a href="https://easygoenglish.ru/" target="_blank" class="project__wrapper not-effect">
                     <div class="project__feat">
+                        <!-- <video class="project__video" playsinline autoplay muted loop data-lazy-src="<?= ASSETS_PATH ?>video/easygoenglish.mp4"></video> -->
                         <img class="project__img" loading="lazy" src="<?= ASSETS_PATH ?>images/projects/easygoenglish.png" />
                     </div>
                     <div class="project__info">
@@ -12,9 +13,11 @@
                     </div>
                 </a>
             </li>
-            <li class="project" data-aos="zoom-in" data-aos-duration="2000">
+            <li class="project project_niko" data-aos="zoom-in" data-aos-duration="2000">
                 <a href="https://sochi.niko-m.ru/" target="_blank" class="project__wrapper not-effect">
+
                     <div class="project__feat">
+                        <video class="project__video" playsinline autoplay muted loop data-lazy-src="<?= ASSETS_PATH ?>video/niko.mp4"></video>
                         <img class="project__img" loading="lazy" src="<?= ASSETS_PATH ?>images/projects/niko.png" />
                     </div>
                     <div class="project__info">
@@ -35,7 +38,7 @@
             <li class="project" data-aos="zoom-in" data-aos-duration="2000">
                 <a href="https://neiros.ru/help/rabota-s-konstruktorom-chat-botov/" target="_blank" class="project__wrapper not-effect">
                     <div class="project__feat" style="transform: translate3d(0px, -6px, 0) rotate(-1deg);">
-                        <img class="project__img" loading="lazy" src="<?= ASSETS_PATH ?>images/projects/neiros.png"  />
+                        <img class="project__img" loading="lazy" src="<?= ASSETS_PATH ?>images/projects/neiros.png" />
                     </div>
                     <div class="project__info">
                         <span class="project__title link">Neiros</span> - конструктор чат-ботов

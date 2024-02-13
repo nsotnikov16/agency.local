@@ -54,9 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function handlerScroll() {
     const contentHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollProgress = (window.scrollY / contentHeight) * 100;
-
-    html.classList.remove('bg-2');
-    if (scrollProgress >= 15) html.classList.add('bg-2');
+    
+    if (typeof window.noChangeBackround === 'undefined') {
+        html.classList.remove('bg-2');
+        if (scrollProgress >= 15) html.classList.add('bg-2');
+    }
+    
 
     if (header) {
         header.classList.remove('header_scrolled');

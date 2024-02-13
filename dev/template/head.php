@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="<?= defined('BG_2') && BG_2 ? 'bg-2' : ''?>">
 
 <head>
     <meta charset="UTF-8">
@@ -8,4 +8,4 @@
     <link rel="stylesheet" href="<?= ASSETS_PATH ?>/css/style.css">
 </head>
 
-<body>
+<body >
