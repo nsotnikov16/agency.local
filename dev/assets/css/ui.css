@@ -117,3 +117,13 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
     border: 2px solid var(--body-color);
 }
+
+
+.scale {
+    transform: scale(1);
+    transition: transform var(--transition-duration) ease-in;
+}
+
+.scale:hover {
+    transform: scale(1.05);
+}
