@@ -13,6 +13,16 @@
                 </a>
             </li>
             <li class="project" data-aos="zoom-in" data-aos-duration="2000">
+                <a href="https://sochi.niko-m.ru/" target="_blank" class="project__wrapper not-effect">
+                    <div class="project__feat">
+                        <img class="project__img" loading="lazy" src="<?= ASSETS_PATH ?>images/projects/niko.png" />
+                    </div>
+                    <div class="project__info">
+                        <span class="project__title link">Niko-Media</span> - наружная реклама
+                    </div>
+                </a>
+            </li>
+            <!-- <li class="project" data-aos="zoom-in" data-aos-duration="2000">
                 <a href="https://sauna-pautina.ru/" target="_blank" class="project__wrapper not-effect">
                     <div class="project__feat">
                         <img class="project__img" loading="lazy" src="<?= ASSETS_PATH ?>images/projects/sauna.png" />
@@ -21,7 +31,7 @@
                         <span class="project__title link">Паутина</span> - сауна, хамам, СПА
                     </div>
                 </a>
-            </li>
+            </li> -->
             <li class="project" data-aos="zoom-in" data-aos-duration="2000">
                 <a href="https://neiros.ru/help/rabota-s-konstruktorom-chat-botov/" target="_blank" class="project__wrapper not-effect">
                     <div class="project__feat" style="transform: translate3d(0px, -6px, 0) rotate(-1deg);">

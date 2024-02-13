@@ -21,7 +21,7 @@
                         <p class="service__name">Техническая поддержка</p>
                     </div>
                 </li>
-                <li class="service" data-aos="flip-right" data-aos-duration="1200">
+                <!-- <li class="service" data-aos="flip-right" data-aos-duration="1200">
                     <img class="service__img" data-lazy-src="<?= ASSETS_PATH ?>images/services/seo.svg" alt="SEO продвижение">
                     <div class="service__info">
                         <p class="service__name">SEO продвижение</p>
@@ -32,7 +32,7 @@
                     <div class="service__info">
                         <p class="service__name">Контекстная/таргетированная реклама</p>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
