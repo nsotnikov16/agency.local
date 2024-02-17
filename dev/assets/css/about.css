@@ -1,0 +1,30 @@
+.about {
+
+}
+
+.about__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 50px;
+}
+
+.about__item {
+    display: flex;
+    align-items: center;
+}
+
+.about__item:nth-child(2n) {
+    margin-left: auto;
+}
+
+.about__item-img {
+    margin-right: 25px;
+    background: var(--body-bg);
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.about__item-text {
+    font-size: 25px;
+    line-height: 1.4;
+}

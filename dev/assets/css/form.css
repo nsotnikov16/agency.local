@@ -1,0 +1,54 @@
+
+.form {
+
+}
+
+
+.form_start {
+    padding-left: 15%;
+    width: max-content;
+}
+
+
+.form__row {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form__row:last-child {
+    margin-bottom: 0;
+}
+
+.form__label {
+    font-size: 23px;
+    margin-right: 15px;
+}
+
+
+.form__input,
+.form__textarea {
+    padding: 8px 15px;
+    background-color: #e6eded;
+    color: var(--body-color);
+    border: none;
+    font-size: 20px;
+}
+
+.form__input {
+    min-width: 450px;
+    height: 60px;
+}
+
+.form__textarea {
+    min-width: 600px;
+    height: 120px;
+    resize: none;
+}
+
+.form__btn {
+    width: 250px;
+    font-size: 23px;
+    display: block;
+    margin-left: auto;
+}

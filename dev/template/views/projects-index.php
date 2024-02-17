@@ -35,7 +35,7 @@
                     </div>
                 </a>
             </li> -->
-            <li class="project" data-aos="zoom-in" data-aos-duration="2000">
+            <li class="project m-auto" data-aos="zoom-in" data-aos-duration="2000">
                 <a href="https://neiros.ru/help/rabota-s-konstruktorom-chat-botov/" target="_blank" class="project__wrapper not-effect">
                     <div class="project__feat" style="transform: translate3d(0px, -6px, 0) rotate(-1deg);">
                         <img class="project__img" loading="lazy" src="<?= ASSETS_PATH ?>images/projects/neiros.png" />

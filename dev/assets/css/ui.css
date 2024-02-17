@@ -19,6 +19,9 @@
 .m-auto {
     margin: 0 auto;
 }
+.m-left-auto {
+    margin-left: auto;
+}
 
 .text-center {
     text-align: center;
@@ -126,4 +129,8 @@ body::-webkit-scrollbar-thumb {
 
 .scale:hover {
     transform: scale(1.05);
+}
+
+.btn {
+    cursor: pointer;
 }

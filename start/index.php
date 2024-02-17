@@ -4,4 +4,5 @@ define('HIDE_LEAD_SECTION', true);
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <? view('hero-start'); ?>
+<? view('form-start'); ?>
 <? getFooter();
