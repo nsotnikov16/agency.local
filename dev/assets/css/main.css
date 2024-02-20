@@ -38,3 +38,8 @@ main {
     line-height: 1.11;
     letter-spacing: -0.025em;
 }
+
+.logo {
+    font-size: 30px;
+    font-weight: 600;
+}

@@ -3,7 +3,7 @@
 <header class="header">
     <div class="container">
         <div class="header__wrapper">
-            <a href="/" class="logo">Моё агенство</a>
+            <a href="/" class="logo not-effect"><b style="font-size: 37px;">iT</b>rinity Agency</a>
             <div class="header__menu-wrapper">
                 <nav class="header__nav">
                     <a href="#" class="header__nav-link">Услуги</a>
