@@ -43,3 +43,9 @@ main {
     font-size: 30px;
     font-weight: 600;
 }
+
+.logo svg {
+    width: 200px;
+    fill: var(--body-color);
+    stroke: var(--body-color);
+}

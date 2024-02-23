@@ -1,6 +1,4 @@
-.about {
-
-}
+.about {}
 
 .about__list {
     display: grid;
@@ -27,4 +25,42 @@
 .about__item-text {
     font-size: 25px;
     line-height: 1.4;
+}
+
+.about__row {
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__row:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.about__row-left {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-right: 5%;
+    flex-shrink: 0;
+}
+
+.about__row-img {
+    width: 100%;
+}
+
+.about__row-left h3 {
+    font-size: 50px;
+}
+
+.about__row-right {
+    font-size: 32px;
+}
+
+.about__row:nth-child(2n) .about__row-left {
+    margin-right: initial;
+    margin-left: 5%;
 }

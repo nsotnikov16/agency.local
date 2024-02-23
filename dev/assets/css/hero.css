@@ -1,4 +1,6 @@
-.hero {}
+.hero {
+    position: relative;
+}
 
 .hero__title {
     font-size: 72px;
@@ -23,4 +25,18 @@
 
 .hero_start .hero__subtitle {
     font-size: 1.7rem
+}
+
+.hero_about .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__img {
+    max-height: 700px;
+}
+.hero_about .hero__title {
+    max-width: initial;
 }

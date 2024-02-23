@@ -62,3 +62,11 @@ a.header__nav-link::before {
 .header__mob-btn {
     display: none;
 }
+
+.header__logo svg {
+    transform: translateY(-15px);
+}
+.header_scrolled .header__logo svg {
+    width: 150px;
+    transform: translateY(0);
+}
