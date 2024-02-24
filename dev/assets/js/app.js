@@ -54,12 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function handlerScroll() {
     const contentHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollProgress = (window.scrollY / contentHeight) * 100;
-    
+
     if (typeof window.noChangeBackround === 'undefined') {
         html.classList.remove('bg-2');
         if (scrollProgress >= 15) html.classList.add('bg-2');
     }
-    
+
 
     if (header) {
         header.classList.remove('header_scrolled');
@@ -138,3 +138,63 @@ window.addEventListener("DOMContentLoaded", function () {
         input.addEventListener("keydown", mask, false)
     });
 });
+
+/**
+* Общий метод для работы с запросами
+* @param {string} method 
+* @param {string} url 
+* @param {object} data 
+* @returns {object}
+*/
+async function request(method = 'GET', url, data) {
+    let result = {};
+    try {
+        if (!url) throw new Error('Отсутствует url адрес');
+        const body = data instanceof FormData ? data : JSON.stringify(data);
+
+        const options = {
+            method,
+            ...method != 'GET' && data ? { body } : ''
+        }
+
+        if (data instanceof FormData === false) {
+            options.headers = {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        const response = await fetch(url, options);
+
+        result = await response.json();
+
+    } catch (error) {
+        result = { success: false, error: error.message };
+    }
+
+    return result;
+}
+
+
+const formStartProject = document.querySelector('[data-form-project]');
+const successStartProject = document.querySelector('[data-project-success]');
+const failedStartProject = document.querySelector('[data-project-failed]');
+
+if (formStartProject && successStartProject && failedStartProject) {
+    const btn = formStartProject.querySelector('.form__btn');
+    formStartProject.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        try {
+            btn.textContent = 'Отправляем...';
+            failedStartProject.classList.add('d-none');
+            const result = await request('POST', '/dev/api/project.php', new FormData(e.target));
+            if (!result.status) throw new Error('');
+            successStartProject.classList.remove('d-none');
+            formStartProject.reset();
+        } catch (error) {
+            failedStartProject.classList.remove('d-none');
+        } finally {
+            arrPopups['form-start-result'].open();
+            btn.textContent = 'Отправить';
+        }
+    })
+}

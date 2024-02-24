@@ -2,7 +2,7 @@
 define('BG_2', true);
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
-<section class="section hero hero_about">
+<section class="section hero hero_inner">
     <div class="container">
         <h1 class="hero__title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">О нас</h1>
         <img class="hero__img" data-img-svg data-src="<?= ASSETS_PATH ?>images/about/online-team-meeting.svg" alt="">
@@ -17,7 +17,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
                     <img class="about__row-img" data-img-svg data-src="<?= ASSETS_PATH ?>images/about/group-presentation.svg" alt="">
                 </div>
                 <div class="about__row-right">
-                    <p>ITrinity - это компания, занимающаяся разработкой и продвижением сайтов. Мы помогаем компаниям любого размера и отрасли улучшить свой онлайн-присутствие и достичь своих бизнес-целей. Наша цель - помочь предприятиям любого размера получить максимальную отдачу от своих инвестиций в веб-технологии.</p>
+                    <p>ITrinity - это молодая и развивающаяся компания, занимающаяся разработкой и продвижением сайтов. Мы помогаем компаниям любого размера и отрасли улучшить свой онлайн-присутствие и достичь своих бизнес-целей. Наша цель - помочь предприятиям любого размера получить максимальную отдачу от своих инвестиций в веб-технологии.</p>
                 </div>
             </div>
             <div class="about__row">

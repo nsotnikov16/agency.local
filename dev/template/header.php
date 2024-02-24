@@ -6,10 +6,8 @@
             <a href="/" class="logo header__logo not-effect"><img data-img-svg data-src="<?= ASSETS_PATH ?>/images/logo.svg"></a>
             <div class="header__menu-wrapper">
                 <nav class="header__nav">
-                    <a href="#" class="header__nav-link">Услуги</a>
-                    <a href="#" class="header__nav-link">Портфолио</a>
-                    <a href="#" class="header__nav-link">Контакты</a>
-                    <a href="#" class="header__nav-link">Что-то еще</a>
+                    <a href="/services/" class="header__nav-link">Услуги</a>
+                    <a href="/projects/" class="header__nav-link">Портфолио</a>
                     <a href="/start/" class="header__nav-project btn not-effect">Начать проект</a>
                 </nav>
             </div>

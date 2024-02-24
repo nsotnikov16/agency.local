@@ -29,3 +29,26 @@
     font-size: 23px;
     font-weight: 500;
 }
+
+.services_page .services__list {
+    grid-template-columns: 1fr;
+    gap: 70px
+}
+
+.services_page .service {
+    flex-direction: row;
+    border-radius: initial;
+    border: initial
+}
+
+.services_page .service__img {
+    max-width: 350px;
+    margin-right: 5%;
+}
+
+.services_page .service__name {
+    font-size: 34px;
+    font-weight: 600;
+    max-width: 700px;
+    margin-bottom: 20px;
+}

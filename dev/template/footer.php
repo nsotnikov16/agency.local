@@ -18,8 +18,8 @@
             <div class="footer__menu-wrapper">
                 <nav class="footer__nav">
                     <span class="footer__nav-title">Что мы делаем</span>
-                    <a href="" class="footer__nav-link">Услуги</a>
-                    <a href="" class="footer__nav-link">Проекты</a>
+                    <a href="/services/" class="footer__nav-link">Услуги</a>
+                    <a href="/projects/" class="footer__nav-link">Проекты</a>
                     <a href="" class="footer__nav-link">Работа с клиентом</a>
                     <a href="" class="footer__nav-link">Технологии</a>
                     <a href="" class="footer__nav-link">Обучение</a>

@@ -27,7 +27,7 @@
     font-size: 1.7rem
 }
 
-.hero_about .container {
+.hero_inner .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,6 +37,6 @@
 .hero__img {
     max-height: 700px;
 }
-.hero_about .hero__title {
+.hero_inner .hero__title {
     max-width: initial;
 }

@@ -21,6 +21,7 @@ async function onLoadSvgImg(img) {
         // Copy attributes from <img> to <svg> and remove the "img-svg" marker
         svg.setAttribute("class", img.getAttribute("class") ?? '');
         svg.setAttribute("alt", img.getAttribute("alt") ?? '');
+        svg.setAttribute("style", img.getAttribute("style") ?? '');
 
         // Copy data from SVG file to <svg> element
         svg.setAttribute("viewBox", xmlSvg.getAttribute("viewBox"));

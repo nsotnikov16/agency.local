@@ -33,6 +33,8 @@
     top: 22px;
     cursor: pointer;
     right: 12px;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .popup__close svg {
@@ -50,4 +52,10 @@
         width: 20px;
         height: 20px;
     }
+}
+
+.popup_result .popup__content {
+    background: var(--body-bg);
+    padding: 20px 40px;
+    border-radius: 5px;
 }

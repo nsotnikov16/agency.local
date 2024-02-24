@@ -1,7 +1,7 @@
 <section class="section services">
     <div class="container">
         <div class="services__wrapper">
-            <h2 class="section__title" data-aos="fade-right">Наши услуги</h2>
+            <h2 class="section__title" data-aos="fade-right"><a href="/services/">Наши услуги</a></h2>
             <ul class="services__list">
                 <li class="service" data-aos="flip-left" data-aos-duration="1200">
                     <img class="service__img" data-lazy-src="<?= ASSETS_PATH ?>images/services/razrabotka.svg" alt="Разработка сайтов с нуля">

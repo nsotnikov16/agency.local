@@ -1,6 +1,6 @@
 <?
 
-function message_to_telegram($text)
+function message_to_telegram(string $text)
 {
     if (!defined('TELEGRAM_TOKEN') || !defined('TELEGRAM_CHATID')) return;
     $ch = curl_init();
@@ -17,5 +17,5 @@ function message_to_telegram($text)
             ),
         )
     );
-    curl_exec($ch);
+    return curl_exec($ch);
 }
