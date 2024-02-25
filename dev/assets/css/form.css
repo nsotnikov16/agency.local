@@ -35,6 +35,16 @@
     font-size: 20px;
 }
 
+.form__validity:invalid,
+.form__validity:invalid {
+    background: #ffcbcb;
+}
+
+.form__validity:valid,
+.form__validity:valid {
+    background: #cce8cc;
+}
+
 .form__input {
     min-width: 450px;
     height: 60px;

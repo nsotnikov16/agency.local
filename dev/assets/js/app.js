@@ -178,6 +178,11 @@ async function request(method = 'GET', url, data) {
 const formStartProject = document.querySelector('[data-form-project]');
 const successStartProject = document.querySelector('[data-project-success]');
 const failedStartProject = document.querySelector('[data-project-failed]');
+const formFields = document.querySelectorAll('input, textarea');
+
+if (formFields.length) {
+    formFields.forEach(item => item.addEventListener('input', () => item.classList.add('form__validity'), { once: true }))
+}
 
 if (formStartProject && successStartProject && failedStartProject) {
     const btn = formStartProject.querySelector('.form__btn');

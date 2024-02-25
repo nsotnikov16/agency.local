@@ -20,15 +20,15 @@
                     <span class="footer__nav-title">Что мы делаем</span>
                     <a href="/services/" class="footer__nav-link">Услуги</a>
                     <a href="/projects/" class="footer__nav-link">Проекты</a>
-                    <a href="" class="footer__nav-link">Работа с клиентом</a>
-                    <a href="" class="footer__nav-link">Технологии</a>
-                    <a href="" class="footer__nav-link">Обучение</a>
-                    <a href="" class="footer__nav-link">Вопрос-ответ</a>
+                    <!-- <a href="" class="footer__nav-link">Работа с клиентом</a> -->
+                    <a href="/technologies/" class="footer__nav-link">Технологии</a>
+                    <!-- <a href="" class="footer__nav-link">Обучение</a>
+                    <a href="" class="footer__nav-link">Вопрос-ответ</a> -->
                 </nav>
                 <nav class="footer__nav">
                     <span class="footer__nav-title">Кто мы</span>
                     <a href="/about/" class="footer__nav-link">О нас</a>
-                    <a href="" class="footer__nav-link">Сотрудничество</a>
+                    <!-- <a href="" class="footer__nav-link">Сотрудничество</a> -->
                 </nav>
                 <nav class="footer__nav">
                     <span class="footer__nav-title">База знаний</span>
@@ -42,8 +42,8 @@
         </div>
 
         <div class="footer__bottom">
-            <div class="footer__copyright">© 2024<?= date('Y') === '2024' ? '' : (' - ' . date('Y')) ?>. Все права защищены</div>
-            <a href="" class="footer__policy">Политика конфиденциальности</a>
+            <div class="footer__copyright">© 2024<?= date('Y') === '2024' ? '' : (' - ' . date('Y')) ?>. Все права защищены. ITRinity. ИП Сотников Н.С.</div>
+            <a href="/privacy-policy/" class="footer__policy">Политика конфиденциальности</a>
         </div>
     </div>
 </footer>
