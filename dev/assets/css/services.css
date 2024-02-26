@@ -12,6 +12,7 @@
     border-radius: 15px;
     border: 2px solid var(--body-color);
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .service__img {
@@ -51,4 +52,30 @@
     font-weight: 600;
     max-width: 700px;
     margin-bottom: 20px;
+}
+
+@media(max-width: 1024px) {
+
+    .services {
+        overflow: hidden;
+    }
+    .services__list {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        width: 100vw;
+        padding-right: 40px;
+    }
+
+    .service__img {
+        height: 210px;
+    }
+
+    .service {
+        width: 250px;
+    }
+
+    .service__name {
+        font-size: 18px;
+    }
 }

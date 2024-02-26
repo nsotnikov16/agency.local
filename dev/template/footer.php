@@ -42,7 +42,7 @@
         </div>
 
         <div class="footer__bottom">
-            <div class="footer__copyright">© 2024<?= date('Y') === '2024' ? '' : (' - ' . date('Y')) ?>. Все права защищены. ITRinity. ИП Сотников Н.С.</div>
+            <div class="footer__copyright">ITRinity. ИП Сотников Н.С.<br>© 2024<?= date('Y') === '2024' ? '' : (' - ' . date('Y')) ?>. Все права защищены.</div>
             <a href="/privacy-policy/" class="footer__policy">Политика конфиденциальности</a>
         </div>
     </div>

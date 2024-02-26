@@ -45,7 +45,24 @@ main {
 }
 
 .logo svg {
-    width: 200px;
+    width: 150px;
     fill: var(--body-color);
     stroke: var(--body-color);
+}
+
+@media(max-width: 991px) {
+    main {
+        padding-top: 80px;
+    }
+}
+
+@media(max-width: 991px) {
+    .section {
+        padding: 35px 0;
+    }
+
+    .section__title {
+        font-size: 35px;
+        margin-bottom: 35px;
+    }
 }

@@ -5,19 +5,19 @@
             <div class="form__wrapper">
                 <div class="form__row">
                     <label class="form__label">Как Вас зовут? *</label>
-                    <input class="form__input" type="text" name="name" placeholder="Введите ваше имя" minlength="2" maxlength="30" required>
+                    <input class="form__input" type="text" name="name" placeholder="Введите ваше имя" minlength="2" maxlength="30" required autocomplete="off">
                 </div>
                 <div class="form__row">
                     <label class="form__label">Ваш номер телефона *</label>
-                    <input class="form__input tel" type="text" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" name="phone" minlength="18" placeholder="+7 (800) 555-35-35" title="Формат: +7 (800) 555-35-35" maxlength="18" required>
+                    <input class="form__input tel" type="text" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" name="phone" minlength="18" placeholder="+7 (800) 555-35-35" autocomplete="off" title="Формат: +7 (800) 555-35-35" maxlength="18" required>
                 </div>
                 <div class="form__row">
                     <label class="form__label">Ваш Email</label>
-                    <input class="form__input" type="email" name="email" placeholder="example@example.ru" minlength="2" maxlength="80">
+                    <input class="form__input" type="email" name="email" placeholder="example@example.ru" minlength="2" maxlength="80" autocomplete="off">
                 </div>
                 <div class="form__row">
                     <label class="form__label">Опишите Ваш проект</label>
-                    <textarea name="description" class="form__textarea" maxlength="300"></textarea>
+                    <textarea name="description" class="form__textarea" maxlength="300" autocomplete="off"></textarea>
                 </div>
                 <span>* - обязательные поля к заполнению</span>
                 <button class="btn form__btn">Отправить</button>

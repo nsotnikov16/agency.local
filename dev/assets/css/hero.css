@@ -40,3 +40,28 @@
 .hero_inner .hero__title {
     max-width: initial;
 }
+
+@media(max-width: 991px) {
+    .hero__title {
+        font-size: 52px;
+        margin-bottom: 25px;
+        max-width: 80%;
+    }
+
+    .hero__subtitle {
+        font-size: 1.3rem;
+        max-width: 80%;
+    }
+}
+
+@media(max-width: 991px) {
+    .hero__title {
+        font-size: 38px;
+        max-width: 100%;
+    }
+
+    .hero__subtitle {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+}

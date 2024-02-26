@@ -3,7 +3,13 @@ if (typeof AOS !== 'undefined') {
 }
 const html = document.querySelector('html');
 const header = document.querySelector('.header');
+const headerMobBtn = document.querySelector('.header__mob-btn')
 let prevScroll = window.scrollY;
+
+
+if (header && headerMobBtn) {
+    headerMobBtn.addEventListener('click', () => header.classList.toggle('header_menu'));
+}
 
 // Popups
 class Popup {
@@ -65,7 +71,7 @@ function handlerScroll() {
         header.classList.remove('header_scrolled');
         header.classList.remove('header_hide');
         if (scrollProgress >= 3) header.classList.add('header_scrolled');
-        if (window.scrollY > prevScroll) header.classList.add('header_hide');
+        if (window.scrollY > prevScroll && window.innerWidth > 991) header.classList.add('header_hide');
     }
 
     prevScroll = window.scrollY;
@@ -181,7 +187,9 @@ const failedStartProject = document.querySelector('[data-project-failed]');
 const formFields = document.querySelectorAll('input, textarea');
 
 if (formFields.length) {
-    formFields.forEach(item => item.addEventListener('input', () => item.classList.add('form__validity'), { once: true }))
+    formFields.forEach(item => { 
+        item.addEventListener('input', () => item.classList.add('form__validity'));
+    })
 }
 
 if (formStartProject && successStartProject && failedStartProject) {
@@ -195,6 +203,8 @@ if (formStartProject && successStartProject && failedStartProject) {
             if (!result.status) throw new Error('');
             successStartProject.classList.remove('d-none');
             formStartProject.reset();
+            console.log(formStartProject.elements);
+            Array.from(formStartProject.elements).forEach(item => item.classList.remove('form__validity'));
         } catch (error) {
             failedStartProject.classList.remove('d-none');
         } finally {
