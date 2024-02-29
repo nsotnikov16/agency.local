@@ -78,4 +78,52 @@
     .service__name {
         font-size: 18px;
     }
+
+    .services_page .services__list {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .services_page .service {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .services_page .service__img {
+        height: initial;
+        margin-right: 0;
+        max-width: 200px;
+        margin: 0;
+    }
+
+    .services_page .service__info {
+        padding: 0;
+        margin-top: 25px;
+    }
+
+    .services_page .service__name {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .services_page .service__name br {
+        display: none;
+    }
+
+    .services_page .services__list {
+        gap: 30px
+    }
+}
+
+@media(max-width: 767px) {
+    .services_page .service__name {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 560px) {
+    .services_page .service__img {
+        margin: 0 auto;
+    }
 }

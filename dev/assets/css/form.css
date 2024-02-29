@@ -1,7 +1,4 @@
-
-.form {
-
-}
+.form {}
 
 
 .form_start {
@@ -61,4 +58,35 @@
     font-size: 23px;
     display: block;
     margin-left: auto;
+}
+
+
+@media(max-width: 1200px) {
+    .form_start {
+        padding-left: initial;
+    }
+}
+
+@media(max-width: 992px) {
+    .form__row {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .form__label {
+        margin: 0 0 15px 0;
+    }
+
+    .form_start {
+        width: 100%;
+    }
+
+    .form__input, .form__textarea {
+        width: 100%;
+        min-width: initial;
+    }
+
+    .form__btn {
+        margin: 30px auto 0;
+    }
 }

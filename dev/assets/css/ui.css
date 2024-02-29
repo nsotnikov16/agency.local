@@ -82,7 +82,7 @@ a:not(.not-effect):hover, .link:not(.not-effect):hover {
     outline: 0;
 }
 
-a:not(.not-effect):hover::after, .link:not(.not-effect):hover::after {
+a:not(.not-effect):hover::after, .link:not(.not-effect):hover::after, .link_active.link:not(.not-effect)::after {
     -webkit-transform-origin: left;
     -ms-transform-origin: left;
     transform-origin: left;
@@ -133,4 +133,10 @@ body::-webkit-scrollbar-thumb {
 
 .btn {
     cursor: pointer;
+}
+
+@media(max-width: 767px) {
+    hr {
+        padding: 0;
+    }
 }

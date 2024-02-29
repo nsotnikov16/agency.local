@@ -19,3 +19,8 @@ function message_to_telegram(string $text)
     );
     return curl_exec($ch);
 }
+
+function checkUrl(string $url)
+{
+    return strpos($_SERVER['REQUEST_URI'], $url) !== false;
+}

@@ -5,7 +5,7 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
-            <div class="footer__contacts">
+            <div class="footer__contacts" id="contacts">
                 <a href="/" class="logo not-effect"><img data-img-svg data-src="<?= ASSETS_PATH ?>/images/logo.svg"></a>
                 <a href="tel:+78005553535">8 (800) 555-35-35</a>
                 <a href="mailto:test@test.ru">test@test.ru</a>
@@ -47,6 +47,7 @@
         </div>
     </div>
 </footer>
+<div class="btn-up btn-up-hide"></div>
 <? include_once __DIR__ . '/scripts.php' ?>
 </body>
 

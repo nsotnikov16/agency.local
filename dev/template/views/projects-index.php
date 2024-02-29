@@ -36,7 +36,7 @@
                 </a>
             </li>
         </ul>
-        <div style="display: flex; justify-content: center;">
+        <div class="projects__all">
             <a href="/projects/" class="btn not-effect ">Смотреть все проекты</a>
         </div>
     </div>

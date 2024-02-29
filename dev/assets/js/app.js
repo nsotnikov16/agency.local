@@ -8,6 +8,14 @@ let prevScroll = window.scrollY;
 
 
 if (header && headerMobBtn) {
+    const headerNavLinks = header.querySelectorAll('.header__nav-link');
+    if (headerNavLinks.length) {
+        headerNavLinks.forEach(item => {
+            item.addEventListener('click', () => {
+                if (!item.getAttribute('href').startsWith('/')) headerMobBtn.click();
+            })
+        })
+    }
     headerMobBtn.addEventListener('click', () => header.classList.toggle('header_menu'));
 }
 
@@ -102,12 +110,24 @@ lazyLoad();
 window.addEventListener('scroll', handlerScroll);
 
 const swiper = new Swiper('.partners__wrapper', {
-    slidesPerView: 5,
-    spaceBetween: 50,
     scrollbar: {
         el: ".partners__wrapper .swiper-scrollbar",
         //dragSize: 200
     },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        420: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        992: {
+            slidesPerView: 5,
+            spaceBetween: 50
+        }
+    }
 });
 
 /* Маска */
@@ -144,6 +164,40 @@ window.addEventListener("DOMContentLoaded", function () {
         input.addEventListener("keydown", mask, false)
     });
 });
+
+
+const btnUp = {
+    el: document.querySelector('.btn-up'),
+    show() {
+        // удалим у кнопки класс btn-up_hide
+        this.el.classList.remove('btn-up_hide');
+    },
+    hide() {
+        // добавим к кнопке класс btn-up_hide
+        this.el.classList.add('btn-up_hide');
+    },
+    addEventListener() {
+        if (!this.el) return
+        // при прокрутке содержимого страницы
+        window.addEventListener('scroll', () => {
+            // определяем величину прокрутки
+            const scrollY = window.scrollY || document.documentElement.scrollTop;
+            // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+            scrollY > 400 ? this.show() : this.hide();
+        });
+        // при нажатии на кнопку .btn-up
+        document.querySelector('.btn-up').onclick = () => {
+            // переместим в начало страницы
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+    }
+}
+
+btnUp.addEventListener();
 
 /**
 * Общий метод для работы с запросами
@@ -187,7 +241,7 @@ const failedStartProject = document.querySelector('[data-project-failed]');
 const formFields = document.querySelectorAll('input, textarea');
 
 if (formFields.length) {
-    formFields.forEach(item => { 
+    formFields.forEach(item => {
         item.addEventListener('input', () => item.classList.add('form__validity'));
     })
 }

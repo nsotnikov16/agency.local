@@ -45,10 +45,17 @@
     position: absolute;
     z-index: 2;
     object-fit: cover;
+    display: none;
+}
+
+.projects__all {
+    display: flex;
+    justify-content: center;
 }
 
 @media(min-width: 1280px) {
     .project_niko .project__video {
+        display: initial;
         width: 465px;
         height: 265px;
         left: 40px;
@@ -76,6 +83,32 @@
         height: 310px;
         left: 85px;
         top: 40px;
-        
+
+    }
+}
+
+@media(max-width: 992px) {
+    .projects__list {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    .project__img {
+        max-height: initial;
+    }
+
+    .project__info {
+        margin-top: 12px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .projects__all {
+        margin-top: 25px;
     }
 }

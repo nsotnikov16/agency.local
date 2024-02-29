@@ -104,8 +104,17 @@ a.header__nav-link::before {
 }
 
 
+.header__nav-link_contacts {
+    display: none;
+}
 
-@media(max-width: 991px) {
+
+@media(max-width: 992px) {
+
+    .header__nav-link_contacts {
+        display: inline-block;
+    }
+
     .header__wrapper {
         height: 80px;
     }
