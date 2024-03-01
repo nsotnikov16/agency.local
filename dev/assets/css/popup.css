@@ -59,3 +59,13 @@
     padding: 20px 40px;
     border-radius: 5px;
 }
+
+@media(max-width: 767px) {
+    .popup__container {
+        max-width: 90%;
+    }
+
+    .popup_result .popup__content {
+        padding: 15px;
+    }
+}

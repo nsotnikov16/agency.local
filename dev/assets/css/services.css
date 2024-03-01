@@ -16,7 +16,7 @@
 }
 
 .service__img {
-    height: 350px;
+    height: 320px;
     width: 100%;
     object-fit: cover;
     background: white;
@@ -50,7 +50,7 @@
 .services_page .service__name {
     font-size: 34px;
     font-weight: 600;
-    max-width: 700px;
+    max-width: 100%;
     margin-bottom: 20px;
 }
 
@@ -112,13 +112,17 @@
     }
 
     .services_page .services__list {
-        gap: 30px
+        gap: 40px
     }
 }
 
 @media(max-width: 767px) {
     .services_page .service__name {
         font-size: 22px;
+    }
+
+    .service__info {
+        padding: 15px;
     }
 }
 

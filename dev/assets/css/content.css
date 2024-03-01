@@ -15,6 +15,10 @@
 }
 
 @media(max-width: 767px) {
+    .content h2 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
     .content h3 {
         font-size: 20px;
     }

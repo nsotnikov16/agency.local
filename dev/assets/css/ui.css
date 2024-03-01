@@ -36,6 +36,10 @@ hr {
     padding: 1px 0 0 0;
 }
 
+.mb-2 {
+    margin-bottom: 2em;
+}
+
 
 a:not(.not-effect), .link:not(.not-effect) {
     transition: all var(--transition-duration) ease;
