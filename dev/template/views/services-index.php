@@ -2,8 +2,8 @@
     <div class="container">
         <div class="services__wrapper">
             <h2 class="section__title" data-aos="fade-right"><a href="/services/">Наши услуги</a></h2>
-            <ul class="services__list">
-                <li class="service" data-aos="flip-left" data-aos-duration="1200">
+            <ul class="services__list" data-aos="zoom-in" data-aos-duration="1200">
+                <li class="service scale">
                     <a href="/services/#dev" class="not-effect">
                         <img class="service__img" data-lazy-src="<?= ASSETS_PATH ?>images/services/razrabotka.svg" alt="Разработка сайтов с нуля">
                         <div class="service__info">
@@ -11,7 +11,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="service" data-aos="flip-right" data-aos-duration="1200">
+                <li class="service scale">
                     <a href="/services/#crm" class="not-effect">
                         <img class="service__img" data-lazy-src="<?= ASSETS_PATH ?>images/services/crm.svg" alt="Индивидуальная разработка CRM для Вашего бизнеса">
                         <div class="service__info">
@@ -19,7 +19,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="service" data-aos="flip-left" data-aos-duration="1200">
+                <li class="service scale">
                     <a href="/services/#support" class="not-effect">
                         <img class="service__img" data-lazy-src="<?= ASSETS_PATH ?>images/services/support.svg" alt="Техническая поддержка">
                         <div class="service__info">

@@ -6,10 +6,10 @@
             <a href="/" class="logo header__logo not-effect"><img data-img-svg data-src="<?= ASSETS_PATH ?>/images/logo.svg"></a>
             <div class="header__menu-wrapper">
                 <nav class="header__nav">
-                    <a href="/services/" class="header__nav-link <?= checkUrl('/services') ? 'link link_active' : ''?>">Услуги</a>
-                    <a href="/projects/" class="header__nav-link <?= checkUrl('/projects') ? 'link link_active' : ''?>">Портфолио</a>
-                    <a href="#contacts" class="header__nav-link header__nav-link_contacts">Контакты</a>
-                    <a href="/start/" class="header__nav-project btn not-effect">Начать проект</a>
+                    <a href="<?=getCityURL()?>/services/" class="header__nav-link <?= checkUrl('/services') ? 'link link_active' : ''?>">Услуги</a>
+                    <a href="<?=getCityURL()?>/projects/" class="header__nav-link <?= checkUrl('/projects') ? 'link link_active' : ''?>">Портфолио</a>
+                    <a href="<?=getCityURL()?>/#contacts" class="header__nav-link header__nav-link_contacts">Контакты</a>
+                    <a href="<?=getCityURL()?>/start/" class="header__nav-project btn not-effect">Начать проект</a>
                 </nav>
             </div>
 

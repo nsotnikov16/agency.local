@@ -59,6 +59,7 @@
     .services {
         overflow: hidden;
     }
+
     .services__list {
         display: flex;
         overflow-x: auto;

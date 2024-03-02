@@ -24,3 +24,18 @@ function checkUrl(string $url)
 {
     return strpos($_SERVER['REQUEST_URI'], $url) !== false;
 }
+
+function getFirstURLSegment(): string
+{
+    try {
+        $url = $_SERVER['REQUEST_URI'];
+        $parsed = parse_url($url);
+        $path = $parsed['path'];
+        $path_parts = explode('/', $path);
+        return $path_parts;
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+
+    return '';
+}
