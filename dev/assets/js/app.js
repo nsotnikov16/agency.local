@@ -11,9 +11,7 @@ if (header && headerMobBtn) {
     const headerNavLinks = header.querySelectorAll('.header__nav-link');
     if (headerNavLinks.length) {
         headerNavLinks.forEach(item => {
-            item.addEventListener('click', () => {
-                if (!item.getAttribute('href').startsWith('/')) headerMobBtn.click();
-            })
+            item.addEventListener('click', () => header.classList.toggle('header_menu'));
         })
     }
     headerMobBtn.addEventListener('click', () => header.classList.toggle('header_menu'));
