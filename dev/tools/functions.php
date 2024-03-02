@@ -32,7 +32,7 @@ function getFirstURLSegment(): string
         $parsed = parse_url($url);
         $path = $parsed['path'];
         $path_parts = explode('/', $path);
-        return $path_parts;
+        return $path_parts[1];
     } catch (\Throwable $th) {
         //throw $th;
     }

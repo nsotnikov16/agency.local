@@ -34,7 +34,7 @@ function getCity()
         if (!isset($GLOBALS['CITY'])) {
             $segment = getFirstURLSegment();
 
-            if ($segment && $GLOBALS['SEO_CITIES'][$segment]) {
+            if ($segment && isset($GLOBALS['SEO_CITIES'][$segment])) {
                 $GLOBALS['CITY'] = $segment;
                 $city = $segment;
             }
