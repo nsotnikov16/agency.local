@@ -57,4 +57,27 @@
     .skills__block {
         margin-bottom: 40px;
     }
+
+    .skills__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 100px);
+        gap: 20px;
+    }
+
+    .skill {
+        margin: 0;
+        padding: 0;
+    }
+
+    .skill__img {
+        max-height: 40px;
+    }
+
+    .skills__title {
+        font-size: 22px;
+    }
+
+    .skill__name {
+        font-size: 16px;
+    }
 }
