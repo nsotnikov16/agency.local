@@ -1,7 +1,7 @@
 <section class="section services">
     <div class="container">
         <div class="services__wrapper">
-            <h2 class="section__title" data-aos="fade-right"><a href="/services/">Наши услуги</a></h2>
+            <h2 class="section__title" data-aos="fade-right"><a href="<?= getCityURL() ?>/services/">Наши услуги</a></h2>
             <ul class="services__list" data-aos="zoom-in" data-aos-duration="1200">
                 <li class="service scale">
                     <a href="<?= getCityURL() ?>/services/#dev" class="not-effect">
