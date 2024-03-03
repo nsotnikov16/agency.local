@@ -63,8 +63,7 @@ function getCitySEO()
     return [];
 }
 
-if (!defined('SEO_TITLE')) {
+if (!isset($GLOBALS['SEO_TITLE'])) {
     $citySEO = getCitySEO();
-    $seo_title = 'Купить сайт на заказ, разработка и продвижение сайта ' . (!empty($citySEO) ? ('в ' . $citySEO[1]) : '' ). '| Itrinity Веб-студия';
-    define('SEO_TITLE', $seo_title);
+    $GLOBALS['SEO_TITLE'] = 'Купить сайт на заказ, разработка и продвижение сайта ' . (!empty($citySEO) ? ('в ' . $citySEO[1]) : '') . '| Itrinity Веб-студия';
 }

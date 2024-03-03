@@ -5,7 +5,7 @@
             <ul class="services__list" data-aos="zoom-in" data-aos-duration="1200">
                 <li class="service scale">
                     <a href="<?= getCityURL() ?>/services/#dev" class="not-effect">
-                        <img class="service__img" data-lazy-src="<?= ASSETS_PATH ?>images/services/razrabotka.svg" alt="Разработка сайтов с нуля">
+                        <img class="service__img" loading="lazy" src="<?= ASSETS_PATH ?>images/services/razrabotka.svg" alt="Разработка сайтов с нуля">
                         <div class="service__info">
                             <p class="service__name">Разработка сайтов с нуля (от лендинга до интернет-магазина)</p>
                         </div>
@@ -13,7 +13,7 @@
                 </li>
                 <li class="service scale">
                     <a href="<?= getCityURL() ?>/services/#crm" class="not-effect">
-                        <img class="service__img" data-lazy-src="<?= ASSETS_PATH ?>images/services/crm.svg" alt="Индивидуальная разработка CRM для Вашего бизнеса">
+                        <img class="service__img" loading="lazy" src="<?= ASSETS_PATH ?>images/services/crm.svg" alt="Индивидуальная разработка CRM для Вашего бизнеса">
                         <div class="service__info">
                             <p class="service__name">Индивидуальная разработка CRM для Вашего бизнеса</p>
                         </div>
@@ -21,7 +21,7 @@
                 </li>
                 <li class="service scale">
                     <a href="<?= getCityURL() ?>/services/#support" class="not-effect">
-                        <img class="service__img" data-lazy-src="<?= ASSETS_PATH ?>images/services/support.svg" alt="Техническая поддержка">
+                        <img class="service__img" loading="lazy" src="<?= ASSETS_PATH ?>images/services/support.svg" alt="Техническая поддержка">
                         <div class="service__info">
                             <p class="service__name">Техническая поддержка и модернизация</p>
                         </div>

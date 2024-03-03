@@ -1,4 +1,4 @@
-.content p {
+.content p, .content li {
     margin-bottom: 10px;
     font-size: 25px;
     line-height: 1.4;
@@ -14,6 +14,11 @@
     margin-bottom: 20px;
 }
 
+.content ul {
+    padding-left: 25px;
+    list-style-type: disc;
+}
+
 @media(max-width: 767px) {
     .content h2 {
         font-size: 32px;
@@ -23,7 +28,7 @@
         font-size: 20px;
     }
 
-    .content p {
+    .content p, .content li {
         font-size: 16px;
     }
 }

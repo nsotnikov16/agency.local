@@ -102,13 +102,17 @@
         max-height: initial;
     }
 
+
+
+    .projects__all {
+        margin-top: 25px;
+    }
+}
+
+@media(max-width: 767px) {
     .project__info {
         margin-top: 12px;
         font-size: 20px;
         text-align: center;
-    }
-
-    .projects__all {
-        margin-top: 25px;
     }
 }
