@@ -1,10 +1,12 @@
 <?php
 define('BG_2', true);
+$SEO_TITLE = 'Услуги агентства ITRinity для разработки и поддержки сайтов и CRM';
+$SEO_DESCRIPTION = 'Наша веб-студия предлагает широкий спектр услуг, включая разработку и поддержку сайтов, создание CRM-систем и многое другое. Мы поможем вам достичь ваших целей в онлайн-мире.';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">
     <div class="container">
-        <h1 class="hero__title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">Наши услуги</h1>
+        <h1 class="hero__title text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">Услуги для разработки и поддержки веб-сайтов, CRM</h1>
         <img class="hero__img" style="max-width: 400px;" data-img-svg data-src="<?= ASSETS_PATH ?>images/services/entrepreneurs-flatline.svg" alt="">
     </div>
 </section>
@@ -18,7 +20,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
                 <li class="service" id="dev">
                     <img class="service__img" loading="lazy" src="<?= ASSETS_PATH ?>images/services/razrabotka.svg" alt="Разработка сайтов с нуля">
                     <div class="service__info">
-                        <h3 class="service__name">Разработка сайтов с нуля<br> (от лендинга до интернет-магазина)</h3>
+                        <h2 class="service__name">Разработка сайтов с нуля<br> (от лендинга до интернет-магазина)</h2>
                         <div class="content">
                             <p>— Предлагаем полный спектр услуг по разработке сайтов с нуля.</p>
                             <p>— Создаем сайты любой сложности, начиная от простых лендингов и заканчивая полнофункциональными интернет-магазинами.</p>
@@ -31,7 +33,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
                 <li class="service" id="crm">
                     <img class="service__img" loading="lazy" src="<?= ASSETS_PATH ?>images/services/crm.svg" alt="Индивидуальная разработка CRM для Вашего бизнеса">
                     <div class="service__info">
-                        <h3 class="service__name">Индивидуальная разработка <a href="<?= getCityURL() ?>/info?type=crm" target="_blank">CRM</a><br> для Вашего бизнеса</h3>
+                        <h2 class="service__name">Индивидуальная разработка <a href="<?= getCityURL() ?>/info?type=crm" target="_blank">CRM</a><br> для Вашего бизнеса</h2>
                         <div class="content">
                             <p>— Предлагаем индивидуальную разработку CRM-систем, которая полностью соответствует потребностям вашего бизнеса.</p>
                             <p>— Создадим CRM, которая будет оптимизирована под ваши бизнес-процессы, упростит управление клиентской базой, автоматизирует задачи и повысит эффективность вашей работы.</p>
@@ -44,7 +46,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
                 <li class="service" id="support">
                     <img class="service__img" loading="lazy" src="<?= ASSETS_PATH ?>images/services/support.svg" alt="Техническая поддержка">
                     <div class="service__info">
-                        <h3 class="service__name">Техническая поддержка и модернизация</h3>
+                        <h2 class="service__name">Техническая поддержка и модернизация</h2>
                         <div class="content">
                             <p>— Предлагаем профессиональную техническую поддержку для вашего веб-сайта или веб-приложения.</p>
                             <p>— Готовы помочь вам с решением любых технических проблем, обновлением и оптимизацией вашего сайта, а также с обеспечением безопасности и стабильной работы.</p>

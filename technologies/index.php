@@ -1,5 +1,7 @@
 <?php
 define('BG_2', true);
+$SEO_TITLE = 'Технологии | ITRinity';
+$SEO_DESCRIPTION = 'Мы используем современные технологии и инструменты для разработки и поддержки сайтов, создания CRM-систем и других проектов. Узнайте больше о наших технологических возможностях.';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">

@@ -1,0 +1,25 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+    RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+    RewriteCond %{REQUEST_URI} ^(.*)/index\.php$
+    RewriteRule ^(.*)index\.php$ http://%{HTTP_HOST}/$1 [R=301,L]
+    RewriteCond %{REQUEST_URI} ^(.*)/detail\.php$
+    RewriteRule ^(.*)detail\.php$ http://%{HTTP_HOST}/$1 [R=301,L]
+    RewriteCond %{REQUEST_URI} ^(.*/[^/\.]+)$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [R=301,L]
+</IfModule>
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"  
+</IfModule> 

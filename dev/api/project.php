@@ -19,7 +19,8 @@ try {
     $html .= 'Имя: ' . $name . PHP_EOL;
     $html .= 'Телефон: ' . $phone . PHP_EOL;
     if ($email) $html .= 'Email: ' . $email . PHP_EOL;
-    if ($description) $html .= 'Описание проекта: ' . $description;
+    if ($description) $html .= 'Описание проекта: ' . $description . PHP_EOL;
+    $html .= 'Откуда: ' . $_SERVER['HTTP_REFERER']; 
 
     $sendResult = json_decode(message_to_telegram($html), true);
 

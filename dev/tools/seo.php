@@ -63,7 +63,15 @@ function getCitySEO()
     return [];
 }
 
+function getCanonical() {
+    return CURRENT_URL . preg_replace("/\?.*/", "", $_SERVER["REQUEST_URI"]);
+}
+
 if (!isset($GLOBALS['SEO_TITLE'])) {
     $citySEO = getCitySEO();
     $GLOBALS['SEO_TITLE'] = 'Купить сайт на заказ, разработка и продвижение сайта ' . (!empty($citySEO) ? ('в ' . $citySEO[1]) : '') . '| Itrinity Веб-студия';
+}
+
+if (!isset($GLOBALS['SEO_DESCRIPTION'])) {
+    $GLOBALS['SEO_DESCRIPTION'] = 'ITRinity - Веб-студия для разработки и поддержки сайтов, CRM';
 }

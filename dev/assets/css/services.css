@@ -125,6 +125,10 @@
     .service__info {
         padding: 15px;
     }
+
+    .service.scale:hover {
+        transform: initial;
+    }
 }
 
 @media(max-width: 560px) {

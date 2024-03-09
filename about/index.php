@@ -1,10 +1,12 @@
 <?php
 define('BG_2', true);
+$SEO_TITLE = 'О нас | ITRinity';
+$SEO_DESCRIPTION = 'Узнайте больше о нашем веб-агентстве, нашей команде и нашем опыте. Мы стремимся к качеству, инновациям и удовлетворению потребностей наших клиентов.';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">
     <div class="container">
-        <h1 class="hero__title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">О нас</h1>
+        <h1 class="hero__title text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">О нашем веб-агентстве</h1>
         <img class="hero__img" data-img-svg data-src="<?= ASSETS_PATH ?>images/about/online-team-meeting.svg" alt="">
     </div>
 </section>
@@ -17,7 +19,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
                     <img class="about__row-img" data-img-svg data-src="<?= ASSETS_PATH ?>images/about/group-presentation.svg" alt="">
                 </div>
                 <div class="about__row-right content">
-                    <p>ITRinity - это молодая и развивающаяся компания, занимающаяся разработкой и продвижением сайтов. Мы помогаем компаниям любого размера и отрасли улучшить свой онлайн-присутствие и достичь своих бизнес-целей. Наша цель - помочь предприятиям любого размера получить максимальную отдачу от своих инвестиций в веб-технологии.</p>
+                    <p>ITRinity (Айтринити) - это молодая и развивающаяся компания, занимающаяся разработкой и продвижением сайтов. Мы помогаем компаниям любого размера и отрасли улучшить свой онлайн-присутствие и достичь своих бизнес-целей. Наша цель - помочь предприятиям любого размера получить максимальную отдачу от своих инвестиций в веб-технологии.</p>
                 </div>
             </div>
             <div class="about__row">

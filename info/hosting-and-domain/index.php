@@ -1,13 +1,16 @@
-<?
-$SEO_TITLE = 'Хостинг и домен';
-getHeader(); ?>
+<?php
+define('BG_2', true);
+$SEO_TITLE = 'Хостинг и домен | База знаний ITRinity';
+$SEO_DESCRIPTION = 'Узнайте, что такое хостинг и домен и как они важны для вашего веб-сайта. Мы объясним, как хостинг обеспечивает доступность вашего сайта в Интернете, а домен - его уникальный адрес.';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
+<? getHeader(); ?>
 <section class="section hero hero_inner">
     <div class="container">
         <h1 class="hero__title text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">Хостинг и домен</h1>
     </div>
 </section>
 <section class="section content">
-    <div class="container">
+    <div class="container" style="max-width: 1200px;">
         <p>Хостинг и домен - это два важных компонента для создания и размещения веб-сайта в интернете.</p>
         <br>
         <p> 1. Что это такое?</p>
@@ -27,3 +30,4 @@ getHeader(); ?>
         <p>Хостинг и домен являются неотъемлемыми компонентами для создания и размещения веб-сайта в интернете. Они обеспечивают доступность вашего сайта и позволяют вам достигать ваших целей в онлайн-мире.</p>
     </div>
 </section>
+<? getFooter();

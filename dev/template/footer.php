@@ -32,10 +32,10 @@
                 </nav>
                 <nav class="footer__nav">
                     <span class="footer__nav-title">База знаний</span>
-                    <a href="<?=getCityURL()?>/info/?type=crm" class="footer__nav-link">CRM</a>
-                    <a href="<?=getCityURL()?>/info/?type=cms" class="footer__nav-link">CMS</a>
-                    <a href="<?=getCityURL()?>/info/?type=hosting-and-domain" class="footer__nav-link">Хостинг и домен</a>
-                    <a href="<?=getCityURL()?>/info/?type=virtual-server" class="footer__nav-link">Виртуальный сервер</a>
+                    <a href="<?=getCityURL()?>/info/crm/" class="footer__nav-link">CRM</a>
+                    <a href="<?=getCityURL()?>/info/cms/" class="footer__nav-link">CMS</a>
+                    <a href="<?=getCityURL()?>/info/hosting-and-domain/" class="footer__nav-link">Хостинг и домен</a>
+                    <a href="<?=getCityURL()?>/info/virtual-server/" class="footer__nav-link">Виртуальный сервер</a>
                     <!-- <a href="<?=getCityURL()?>/info/?type=crm" class="footer__nav-link">Пример оформления ТЗ</a> -->
                 </nav>
             </div>

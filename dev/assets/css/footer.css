@@ -68,6 +68,10 @@ a.footer__nav-link::before,
     margin-top: 15px;
 }
 
+.footer__policy, .footer__copyright {
+    font-size: 15px;
+}
+
 @media(max-width: 992px) {
     .footer__wrapper {
         display: block;
@@ -107,9 +111,5 @@ a.footer__nav-link::before,
     .footer__menu-wrapper {
         grid-template-columns: 1fr;
         gap: 30px;
-    }
-
-    .footer__policy, .footer__copyright {
-        font-size: 15px;
     }
 }
