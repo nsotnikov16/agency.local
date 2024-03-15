@@ -48,7 +48,10 @@ class Popup {
     }
 
     setEventListeners() {
-        this.openingLinks.forEach(link => link.addEventListener('click', (e) => { e.preventDefault(); this.open(e.currentTarget) }))
+        this.openingLinks.forEach(link => link.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.open(e.currentTarget)
+        }))
         this.closeButton.addEventListener('click', () => this.close());
         this.popupElement.addEventListener('click', this._handleOverlayClick.bind(this));
     }
@@ -90,7 +93,7 @@ function lazyLoad() {
     lazyImages.forEach(img => {
         //img.setAttribute('src', '/dev/assets/images/load.gif');
         function showImg() {
-            const { top } = img.getBoundingClientRect();
+            const {top} = img.getBoundingClientRect();
             if (top >= window.innerHeight - 100) return;
             const src = img.getAttribute('data-lazy-src');
             if (!src) return;
@@ -98,6 +101,7 @@ function lazyLoad() {
             img.removeAttribute('data-lazy-src');
             document.removeEventListener('scroll', showImg);
         }
+
         showImg()
         window.addEventListener('scroll', showImg)
     })
@@ -132,6 +136,7 @@ const swiper = new Swiper('.partners__wrapper', {
 window.addEventListener("DOMContentLoaded", function () {
     [].forEach.call(document.querySelectorAll('.tel'), function (input) {
         var keyCode;
+
         function mask(event) {
             event.keyCode && (keyCode = event.keyCode);
             var pos = this.selectionStart;
@@ -156,6 +161,7 @@ window.addEventListener("DOMContentLoaded", function () {
             if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
             if (event.type == "blur" && this.value.length < 5) this.value = ""
         }
+
         input.addEventListener("input", mask, false);
         input.addEventListener("focus", mask, false);
         input.addEventListener("blur", mask, false);
@@ -198,12 +204,12 @@ const btnUp = {
 btnUp.addEventListener();
 
 /**
-* Общий метод для работы с запросами
-* @param {string} method 
-* @param {string} url 
-* @param {object} data 
-* @returns {object}
-*/
+ * Общий метод для работы с запросами
+ * @param {string} method
+ * @param {string} url
+ * @param {object} data
+ * @returns {object}
+ */
 async function request(method = 'GET', url, data) {
     let result = {};
     try {
@@ -212,7 +218,7 @@ async function request(method = 'GET', url, data) {
 
         const options = {
             method,
-            ...method != 'GET' && data ? { body } : ''
+            ...method != 'GET' && data ? {body} : ''
         }
 
         if (data instanceof FormData === false) {
@@ -226,7 +232,7 @@ async function request(method = 'GET', url, data) {
         result = await response.json();
 
     } catch (error) {
-        result = { success: false, error: error.message };
+        result = {success: false, error: error.message};
     }
 
     return result;
@@ -265,3 +271,34 @@ if (formStartProject && successStartProject && failedStartProject) {
         }
     })
 }
+
+function createMatrixEffect() {
+    const matrixEffect = document.getElementById('matrix-effect');
+    const characters = 'ITRINITY';
+    const characterCount = 100;
+    const animationDuration = 3000; // Продолжительность анимации в миллисекундах
+    let index = 0;
+
+    function createRandomDelay(i) {
+        return Math.random() * animationDuration;
+    }
+
+    for (let i = 0; i < characterCount; i++) {
+        const character = document.createElement('span');
+        if (!characters[index]) index = 0;
+        character.textContent = characters[index];
+        character.style.position = 'absolute';
+        character.style.top = '0';
+        character.style.left = `${i * 10}px`;
+        character.style.color = 'var(--body-color)';
+        character.style.opacity = '0';
+        character.style.fontSize = '22px'
+        character.style.fontWeight = '600'
+        character.style.animation = `matrix-animation ${animationDuration}ms infinite`;
+        character.style.animationDelay = `${createRandomDelay(i)}ms`;
+        matrixEffect.appendChild(character);
+        index++;
+    }
+}
+
+if (document.querySelector('.hero__matrix')) createMatrixEffect();

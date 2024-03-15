@@ -19,6 +19,7 @@
 .m-auto {
     margin: 0 auto;
 }
+
 .m-left-auto {
     margin-left: auto;
 }
@@ -48,7 +49,7 @@ a:not(.not-effect), .link:not(.not-effect) {
     position: relative;
 }
 
-a:not(.not-effect)::before, .link:not(.not-effect)::before{
+a:not(.not-effect)::before, .link:not(.not-effect)::before {
     content: "";
     display: block;
     position: absolute;
@@ -139,8 +140,20 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     hr {
         padding: 0;
+    }
+}
+
+@keyframes matrix-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(1400%);
     }
 }

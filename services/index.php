@@ -33,7 +33,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
                 <li class="service" id="crm">
                     <img class="service__img" loading="lazy" src="<?= ASSETS_PATH ?>images/services/crm.svg" alt="Индивидуальная разработка CRM для Вашего бизнеса">
                     <div class="service__info">
-                        <h2 class="service__name">Индивидуальная разработка <a href="<?= getCityURL() ?>/info?type=crm" target="_blank">CRM</a><br> для Вашего бизнеса</h2>
+                        <h2 class="service__name">Индивидуальная разработка <a href="<?= getCityURL() ?>/info/crm/"
+                                                                               target="_blank">CRM</a><br> для Вашего бизнеса</h2>
                         <div class="content">
                             <p>— Предлагаем индивидуальную разработку CRM-систем, которая полностью соответствует потребностям вашего бизнеса.</p>
                             <p>— Создадим CRM, которая будет оптимизирована под ваши бизнес-процессы, упростит управление клиентской базой, автоматизирует задачи и повысит эффективность вашей работы.</p>
