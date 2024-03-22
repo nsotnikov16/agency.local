@@ -273,32 +273,45 @@ if (formStartProject && successStartProject && failedStartProject) {
 }
 
 function createMatrixEffect() {
-    const matrixEffect = document.getElementById('matrix-effect');
-    const characters = 'ITRINITY';
-    const characterCount = 100;
-    const animationDuration = 3000; // Продолжительность анимации в миллисекундах
-    let index = 0;
+    let C = document.querySelector("#matrix-effect"),
+        $ = C.getContext("2d"),
+        W = (C.width = C.parentNode.clientWidth - 20),
+        H = (C.height = C.parentNode.clientHeight);
 
-    function createRandomDelay(i) {
-        return Math.random() * animationDuration;
+
+    const str = "А+Б0В-Г1Д=Е2Ё Ж3З И4Й К5Л М6Н О7П Р8С Т9У Ф!Х Ц?Ч Ш.ЩЪ,Ы Ь:ЭЮ;Я";
+    const matrix = str.split("");
+
+    let font = 11,
+        col = W / font,
+        arr = [],
+        duration = 130;
+
+    for (let i = 0; i < col; i++) arr[i] = 1;
+
+    function draw() {
+        $.fillStyle = "rgba(4,40,37,.55)";
+        $.fillRect(0, 0, W, H);
+
+        $.fillStyle = "white";
+        $.font = font + "px Montserrat";
+        for (let i = 0; i < arr.length; i++) {
+            let txt1 = matrix[Math.floor(Math.random() * matrix.length)];
+            let txt2 = matrix[Math.floor(Math.random() * matrix.length)];
+            let txt3 = matrix[Math.floor(Math.random() * matrix.length)];
+            $.fillText(txt1, i * font, arr[i] * font);
+            //$.fillText(txt2, i * font, arr[i] * font + 10);
+            //$.fillText(txt3, i * font, arr[i] * font + 20);
+            if (arr[i] * font > H && Math.random() > 0.975) arr[i] = 0;
+            arr[i]++;
+        }
     }
 
-    for (let i = 0; i < characterCount; i++) {
-        const character = document.createElement('span');
-        if (!characters[index]) index = 0;
-        character.textContent = characters[index];
-        character.style.position = 'absolute';
-        character.style.top = '0';
-        character.style.left = `${i * 10}px`;
-        character.style.color = 'var(--body-color)';
-        character.style.opacity = '0';
-        character.style.fontSize = '22px'
-        character.style.fontWeight = '600'
-        character.style.animation = `matrix-animation ${animationDuration}ms infinite`;
-        character.style.animationDelay = `${createRandomDelay(i)}ms`;
-        matrixEffect.appendChild(character);
-        index++;
-    }
+    setInterval(draw, duration);
+    window.addEventListener("resize", () => {
+        W = (C.width = C.parentNode.clientWidth);
+        H = (C.height = C.parentNode.clientHeight);
+    });
 }
 
 if (document.querySelector('.hero__matrix')) createMatrixEffect();

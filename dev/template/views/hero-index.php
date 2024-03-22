@@ -8,7 +8,7 @@
             дизайном и запоминающимся фирменным стилем.
         </p>
         <div class="hero__matrix">
-            <div id="matrix-effect"></div>
+            <canvas id="matrix-effect"></canvas>
         </div>
     </div>
 </section>
