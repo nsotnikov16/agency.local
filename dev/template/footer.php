@@ -42,7 +42,8 @@
         </div>
 
         <div class="footer__bottom">
-            <div class="footer__copyright">ITRinity. ИП Сотников Н.С.<br>© 2024<?= date('Y') === '2024' ? '' : (' - ' . date('Y')) ?>. Все права защищены.</div>
+            <div class="footer__copyright">ITRinity<br>ИП Сотников Н.С. ОГРНИП: 324890000006185<br>© 2024<?= date('Y') === '2024' ? '' :
+                    (' - ' . date('Y')) ?>. Все права защищены.</div>
             <a href="<?=getCityURL()?>/privacy-policy/" class="footer__policy">Политика конфиденциальности</a>
         </div>
     </div>

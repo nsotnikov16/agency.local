@@ -20,7 +20,11 @@
                     <textarea name="description" class="form__textarea" maxlength="300" autocomplete="off"></textarea>
                 </div>
                 <span>* - обязательные поля к заполнению</span>
-                <button class="btn form__btn">Отправить</button>
+                <div class="form__bottom">
+                    <p class="form__policy">Нажимая кнопку "Отправить", Вы соглашаетесь с <br><a target="_blank" href="/privacy-policy/">Политикой в отношении обработки персональных данных</a></p>
+                    <button class="btn form__btn">Отправить</button>
+                </div>
+
             </div>
         </form>
     </div>

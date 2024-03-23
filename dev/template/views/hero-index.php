@@ -7,8 +7,8 @@
             модульными <a class="link" target="_blank" href="<?= getCityURL() ?>/info/cms/">CMS</a>, качественным
             дизайном и запоминающимся фирменным стилем.
         </p>
-        <div class="hero__matrix">
-            <canvas id="matrix-effect"></canvas>
-        </div>
+<!--        <div class="hero__matrix">-->
+<!--            <canvas id="matrix-effect"></canvas>-->
+<!--        </div>-->
     </div>
 </section>
