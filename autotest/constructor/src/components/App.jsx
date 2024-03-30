@@ -1,12 +1,10 @@
-import React, {useCallback, useEffect} from 'react';
-import {useSelector} from "react-redux";
+import React, {useCallback, useEffect, useRef} from 'react';
 import ReactFlow, {
-    MiniMap,
     Controls,
     Background,
     useNodesState,
     useEdgesState,
-    addEdge,
+    addEdge, useReactFlow, ReactFlowProvider
 } from 'reactflow';
 import StartNode from "./StartNode.jsx";
 import ClickNode from "./ClickNode.jsx";
@@ -14,39 +12,100 @@ import FocusNode from "./FocusNode.jsx";
 import TimeoutNode from "./TimeoutNode.jsx";
 import InputNode from "./InputNode.jsx";
 import ScriptNode from "./ScriptNode.jsx";
+import ChoiceNode from "./ChoiceNode.jsx";
 import 'reactflow/dist/style.css';
+import {getId, getInitialStorageData, updateStorage} from "../tools/functions.js";
 
-const initialNodes = [
-    {id: '1', type: 'StartNode', position: {x: 0, y: 0}, data: {label: '1124'}},
-    {id: '2', type: 'ClickNode', position: {x: 0, y: 100}, data: {label: 'Клик'}},
-    // {id: '3', type: 'TimeoutNode', position: {x: 200, y: 400}, data: {label: '321412'}},
-    // {id: '4', type: 'FocusNode', position: {x: 300, y: 500}, data: {label: '1122'}},
-    // {id: '5', type: 'InputNode', position: {x: 350, y: 600}, data: {label: '1122'}},
-    // {id: '6', type: 'ScriptNode', position: {x: 500, y: 300}, data: {label: '1122'}},
-];
-const initialEdges = [
-    {id: 'e1-2', source: '1', target: '2'},
-    // {id: 'e2-3', source: '2', target: '3'},
-    // {id: 'e3-4', source: '3', target: '4'}
-];
-const nodeTypes = {StartNode, ClickNode, FocusNode, TimeoutNode, InputNode, ScriptNode};
-export default function App() {
+const initialNodes = getInitialStorageData('nodes');
+const initialEdges = getInitialStorageData('edges');
+const nodeTypes = {StartNode, ClickNode, FocusNode, TimeoutNode, InputNode, ScriptNode, ChoiceNode};
+
+function App() {
+    const connectingNodeId = useRef(null);
+    const {screenToFlowPosition} = useReactFlow();
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
-    useEffect(() => {
-        window.addNode = (node) => setNodes(nds => nds.concat(node));
-        window.removeNode = (nodeId) => {
-            const newNodes = nodes.filter(n => n.id !== nodeId)
-            setNodes(newNodes);
-            window.sessionStorage.setItem('nodes', JSON.stringify(newNodes));
-        };
+    const onChangeInput = useCallback((key, value, nodeId) => {
+        // setTimeout(() => {
+        //     setNodes(nodes => nodes.map(node => {
+        //         if (!node.data) node.data = {};
+        //         if (node.id === nodeId) node.data[key] = value;
+        //         return node;
+        //     }))
+        // }, 10)
+
     }, [])
 
+    useEffect(() => {
+        window.nodes = nodes;
+        window.setNodes = setNodes;
+        window.setEdges = setEdges;
+        window.onChangeInput = onChangeInput;
+        window.addNode = (node) => setNodes((nds) => nds.concat(node));
+        window.removeNode = (nodeId) => setNodes((nds) => nds.filter(n => n.id !== nodeId))
+    }, [])
+
+    useEffect(() => {
+        updateStorage({nodes, edges});
+        if (!nodes.length) {
+            window.addNode({
+                id: getId(),
+                type: 'StartNode',
+                position: {x: 15, y: 15}
+            })
+        }
+
+
+        setNodes(nds => nds.map((node, index) => {
+            if (index === 0) node.data = {fromStart: true};
+            return node;
+        }))
+
+    }, [nodes, edges]);
+
     const onConnect = useCallback(
-        (params) => setEdges((eds) => addEdge(params, eds)),
-        [setEdges],
+        (params) => {
+            if (params.source === params.target) return;
+            // reset the start node on connections
+            connectingNodeId.current = null;
+            setEdges((eds) => addEdge(params, eds))
+        },
+        [],
     );
+
+    const onConnectStart = useCallback((_, {nodeId}) => {
+        connectingNodeId.current = nodeId;
+    }, []);
+
+    const onConnectEnd = useCallback(
+        (event) => {
+            if (!connectingNodeId.current) return;
+
+            const targetIsPane = event.target.classList.contains('react-flow__pane');
+
+            if (targetIsPane) {
+                const id = getId();
+                // we need to remove the wrapper bounds, in order to get the correct position
+                const newNode = {
+                    id,
+                    type: 'ChoiceNode',
+                    position: screenToFlowPosition({
+                        x: event.clientX,
+                        y: event.clientY,
+                    }),
+                    data: {},
+                    origin: [0.5, 0.0],
+                };
+
+                setNodes((nds) => nds.concat(newNode));
+                setEdges((eds) => eds.concat({id, source: connectingNodeId.current, target: id}));
+            }
+        },
+        [screenToFlowPosition],
+    );
+
+
 
     return (
         <div style={{width: '100vw', height: '100vh'}}>
@@ -56,13 +115,20 @@ export default function App() {
                 onNodesChange={onNodesChange}
                 onEdgesChange={onEdgesChange}
                 onConnect={onConnect}
+                onConnectStart={onConnectStart}
+                onConnectEnd={onConnectEnd}
                 snapToGrid={true}
                 nodeTypes={nodeTypes}
             >
                 <Controls/>
-                {/*<MiniMap/>*/}
                 <Background variant="" gap={12} size={1}/>
             </ReactFlow>
         </div>
     );
 }
+
+export default () => (
+    <ReactFlowProvider>
+        <App/>
+    </ReactFlowProvider>
+);
