@@ -1,0 +1,11 @@
+$main: #0a5d47;
+$other: white;
+@import 'fonts';
+@import 'ui';
+@import 'reactflow';
+@import 'node.scss';
+
+body {
+  color: $main;
+  font-family: 'Montserrat';
+}
