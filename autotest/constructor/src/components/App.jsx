@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import ReactFlow, {
     Controls,
     Background,
@@ -14,7 +14,7 @@ import InputNode from "./InputNode.jsx";
 import ScriptNode from "./ScriptNode.jsx";
 import ChoiceNode from "./ChoiceNode.jsx";
 import 'reactflow/dist/style.css';
-import {getId, getInitialStorageData, updateStorage} from "../tools/functions.js";
+import {getCurrentTestId, getId, getInitialStorageData, updateStorage} from "../tools/functions.js";
 
 const initialNodes = getInitialStorageData('nodes');
 const initialEdges = getInitialStorageData('edges');
@@ -25,29 +25,24 @@ function App() {
     const {screenToFlowPosition} = useReactFlow();
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-
-    const onChangeInput = useCallback((key, value, nodeId) => {
-        // setTimeout(() => {
-        //     setNodes(nodes => nodes.map(node => {
-        //         if (!node.data) node.data = {};
-        //         if (node.id === nodeId) node.data[key] = value;
-        //         return node;
-        //     }))
-        // }, 10)
-
-    }, [])
+    const [testId, setTestId] = useState(getCurrentTestId());
 
     useEffect(() => {
         window.nodes = nodes;
         window.setNodes = setNodes;
         window.setEdges = setEdges;
-        window.onChangeInput = onChangeInput;
         window.addNode = (node) => setNodes((nds) => nds.concat(node));
         window.removeNode = (nodeId) => setNodes((nds) => nds.filter(n => n.id !== nodeId))
     }, [])
 
     useEffect(() => {
-        updateStorage({nodes, edges});
+        console.log(testId);
+        setNodes(getInitialStorageData('nodes', testId));
+        setEdges(getInitialStorageData('edges', testId));
+    }, [testId])
+
+    useEffect(() => {
+        updateStorage({nodes, edges}, testId);
         if (!nodes.length) {
             window.addNode({
                 id: getId(),
@@ -56,9 +51,8 @@ function App() {
             })
         }
 
-
         setNodes(nds => nds.map((node, index) => {
-            if (index === 0) node.data = {fromStart: true};
+            if (index === 0) node.data = {...node.data, fromStart: true};
             return node;
         }))
 
@@ -67,16 +61,13 @@ function App() {
     const onConnect = useCallback(
         (params) => {
             if (params.source === params.target) return;
-            // reset the start node on connections
             connectingNodeId.current = null;
             setEdges((eds) => addEdge(params, eds))
         },
         [],
     );
 
-    const onConnectStart = useCallback((_, {nodeId}) => {
-        connectingNodeId.current = nodeId;
-    }, []);
+    const onConnectStart = useCallback((_, {nodeId}) => connectingNodeId.current = nodeId, []);
 
     const onConnectEnd = useCallback(
         (event) => {
@@ -104,7 +95,6 @@ function App() {
         },
         [screenToFlowPosition],
     );
-
 
 
     return (

@@ -21,7 +21,7 @@ export default function ChoiceNode(props) {
         });
     }, []);
     return (
-        <MainNode title="Действие" addClass="node_action" {...props}>
+        <MainNode title="Действие" addClass="node_action nodrag" {...props}>
             <div className="mt-10px node__action nodrag" onClick={() => onClick('ClickNode')}>Клик</div>
             <div className="mt-10px node__action nodrag" onClick={() => onClick('FocusNode')}>Фокус</div>
             <div className="mt-10px node__action nodrag" onClick={() => onClick('InputNode')}>Ввод значения</div>

@@ -97,13 +97,19 @@
   border: 1px solid $main;
   border-radius: 5px;
   font-size: 14px;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
   &:hover {
     background: $main;
     color: $other
   }
 }
 
-.node_start:hover {
-  background: $main;
-  color: $other
+
+.node_start {
+  transition: background-color 0.2s linear;
+  &:hover {
+    background: $main;
+    color: $other
+  }
 }
