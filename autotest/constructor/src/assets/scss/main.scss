@@ -4,8 +4,13 @@ $other: white;
 @import 'ui';
 @import 'reactflow';
 @import 'node.scss';
+@import "sidebar";
 
 body {
   color: $main;
   font-family: 'Montserrat';
+}
+
+.app {
+  display: flex;
 }

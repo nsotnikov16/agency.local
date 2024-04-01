@@ -23,13 +23,39 @@ export const getInitialStorageData = (type, testId) => {
 }
 
 export const getCurrentTestId = () => {
-    const id = Number(window.localStorage.getItem('testId'));
-    if (id <= 0) {
-        let newId = getId();
+    const id = window.localStorage.getItem('testId');
+    if (!id) {
+        let randomString = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+        for (let i = 0; i < 5; i++) {
+            randomString += String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+        }
+        let newId = randomString;
         window.localStorage.setItem('testId', newId);
         return newId;
     }
     return id;
+}
+
+export const modifyNodes = (nodes) => {
+    nodes.forEach((node, index) => {
+        if (index === 0) node.data = {...node.data, fromStart: true};
+    });
+
+    return nodes;
+}
+
+export const getTestsLocalStorage = () => {
+    const storage = window.localStorage;
+    let tests = [];
+    if (storage.getItem('tests-itrinity')) {
+        try {
+            const result = JSON.parse(storage.getItem('tests-itrinity'));
+            if (Array.isArray(result)) tests = result;
+        } catch (e) {
+
+        }
+    }
+    return tests;
 }
 
 export const onChangeInput = (key, value, nodeId) => {

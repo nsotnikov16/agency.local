@@ -14,7 +14,15 @@ import InputNode from "./InputNode.jsx";
 import ScriptNode from "./ScriptNode.jsx";
 import ChoiceNode from "./ChoiceNode.jsx";
 import 'reactflow/dist/style.css';
-import {getCurrentTestId, getId, getInitialStorageData, updateStorage} from "../tools/functions.js";
+import {
+    getCurrentTestId,
+    getId,
+    getInitialStorageData,
+    updateStorage,
+    getTestsLocalStorage,
+    modifyNodes
+} from "../tools/functions.js";
+import Sidebar from "./Sidebar.jsx";
 
 const initialNodes = getInitialStorageData('nodes');
 const initialEdges = getInitialStorageData('edges');
@@ -31,12 +39,11 @@ function App() {
         window.nodes = nodes;
         window.setNodes = setNodes;
         window.setEdges = setEdges;
-        window.addNode = (node) => setNodes((nds) => nds.concat(node));
+        window.addNode = (node) => setNodes((nds) => modifyNodes(nds.concat(node)));
         window.removeNode = (nodeId) => setNodes((nds) => nds.filter(n => n.id !== nodeId))
     }, [])
 
     useEffect(() => {
-        console.log(testId);
         setNodes(getInitialStorageData('nodes', testId));
         setEdges(getInitialStorageData('edges', testId));
     }, [testId])
@@ -50,11 +57,6 @@ function App() {
                 position: {x: 15, y: 15}
             })
         }
-
-        setNodes(nds => nds.map((node, index) => {
-            if (index === 0) node.data = {...node.data, fromStart: true};
-            return node;
-        }))
 
     }, [nodes, edges]);
 
@@ -89,30 +91,32 @@ function App() {
                     origin: [0.5, 0.0],
                 };
 
-                setNodes((nds) => nds.concat(newNode));
+                setNodes((nds) => modifyNodes(nds.concat(newNode)));
                 setEdges((eds) => eds.concat({id, source: connectingNodeId.current, target: id}));
             }
         },
         [screenToFlowPosition],
     );
 
-
     return (
-        <div style={{width: '100vw', height: '100vh'}}>
-            <ReactFlow
-                nodes={nodes}
-                edges={edges}
-                onNodesChange={onNodesChange}
-                onEdgesChange={onEdgesChange}
-                onConnect={onConnect}
-                onConnectStart={onConnectStart}
-                onConnectEnd={onConnectEnd}
-                snapToGrid={true}
-                nodeTypes={nodeTypes}
-            >
-                <Controls/>
-                <Background variant="" gap={12} size={1}/>
-            </ReactFlow>
+        <div className="app">
+            {/*<Sidebar setTestId={setTestId}/>*/}
+            <div style={{width: '100%', height: '100vh'}}>
+                <ReactFlow
+                    nodes={nodes}
+                    edges={edges}
+                    onNodesChange={onNodesChange}
+                    onEdgesChange={onEdgesChange}
+                    onConnect={onConnect}
+                    onConnectStart={onConnectStart}
+                    onConnectEnd={onConnectEnd}
+                    snapToGrid={true}
+                    nodeTypes={nodeTypes}
+                >
+                    <Controls/>
+                    <Background variant="" gap={12} size={1}/>
+                </ReactFlow>
+            </div>
         </div>
     );
 }
