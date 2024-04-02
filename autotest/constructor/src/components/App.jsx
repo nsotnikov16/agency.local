@@ -20,7 +20,7 @@ import {
     getInitialStorageData,
     updateStorage,
     getTestsLocalStorage,
-    modifyNodes
+    modifyNodes, generate
 } from "../tools/functions.js";
 import Sidebar from "./Sidebar.jsx";
 import FlowWithProvider from "./FlowWithProvider.jsx";
@@ -30,7 +30,6 @@ const initialEdges = getInitialStorageData('edges');
 const nodeTypes = {StartNode, ClickNode, FocusNode, TimeoutNode, InputNode, ScriptNode, ChoiceNode};
 
 function App() {
-
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
     const [testId, setTestId] = useState(getCurrentTestId());
@@ -44,6 +43,11 @@ function App() {
     }, [])
 
     useEffect(() => {
+        if (!testId) {
+            window.localStorage.removeItem('testId');
+            return;
+        }
+        window.localStorage.setItem('testId', testId)
         setNodes(getInitialStorageData('nodes', testId));
         setEdges(getInitialStorageData('edges', testId));
     }, [testId])
@@ -63,14 +67,20 @@ function App() {
     return (
         <div className="app">
             <Sidebar setTestId={setTestId}/>
-            <div style={{width: '100%', height: '100vh'}}>
-                <FlowWithProvider
-                    nodes={nodes}
-                    edges={edges}
-                    onNodesChange={onNodesChange}
-                    onEdgesChange={onEdgesChange}
-                    snapToGrid={true}
-                    nodeTypes={nodeTypes}/>
+
+            <div className="app__container" style={{width: '100%', height: '100vh'}}>
+                {!testId ? <div>Выберите сценарий тестирования</div> :
+                    <div style={{width: '100%', height: '100vh'}}>
+                        <div className="app__generator node" onClick={() => generate(nodes, edges)}>Сгенерировать код</div>
+                        <FlowWithProvider
+                            nodes={nodes}
+                            edges={edges}
+                            onNodesChange={onNodesChange}
+                            onEdgesChange={onEdgesChange}
+                            snapToGrid={true}
+                            nodeTypes={nodeTypes}/>
+                    </div>
+                }
             </div>
         </div>
     );

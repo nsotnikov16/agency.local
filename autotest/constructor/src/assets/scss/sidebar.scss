@@ -1,12 +1,33 @@
 .sidebar {
+  flex-shrink: 0;
   width: 350px;
   background: $main;
   color: white;
   padding: 20px;
-  transform: translateX(0);
-  transition: transform 0.2s ease;
+  margin-left: 0;
+  transition: margin-left 0.2s ease-in;
+
   &_hide {
-    transform: translateX(-350px);
+    margin-left: -330px;
+
+    .sidebar__content {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .sidebar__arrow {
+      transform: rotate(180deg) translateX(-5px);
+
+      svg {
+        margin-left: initial;
+      }
+    }
+  }
+
+  &__content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s linear;
   }
 
   &__add {
@@ -17,25 +38,64 @@
     border: 1px solid $main;
     cursor: pointer;
     transform: scale(1);
-    transition: transform 0.2s ease;
+    transition: transform 0.2s linear;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
+  }
+
+  &__header {
+    margin-bottom: 15px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__arrow {
     cursor: pointer;
+    fill: white;
+    stroke: white;
+
+    &:hover {
+
+    }
+
+    svg {
+      margin-left: auto;
+      display: block;
+    }
   }
 
 
   &__tests {
     margin: 15px 0;
+    max-height: 650px;
+    overflow: auto;
+    padding-right: 5px;
+    width: calc(100%);
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $main;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $main;
+      border-radius: 20px;
+      border: 2px solid white;
+    }
+
   }
 
   &__test {
     background: white;
-    padding: 3px;
+    padding: 5px 3px;
     display: flex;
     align-items: center;
     border-radius: 5px;
@@ -60,11 +120,12 @@
     }
 
     &-switch {
-      background: $main;
+      background: white;
       position: relative;
       width: 35px;
       height: 20px;
       border-radius: 12px;
+      border: 1px solid $main;
       flex-shrink: 0;
       cursor: pointer;
 
@@ -77,15 +138,17 @@
         top: 2px;
         left: 2px;
         border-radius: 50%;
-        background: white;
+        background: $main;
         transform: translateX(0);
         transition: transform 0.2s linear;
       }
 
       &.active {
+        background: $main;
         &::before {
           transform: translateX(16px);
           left: 0;
+          background: white;
         }
       }
     }

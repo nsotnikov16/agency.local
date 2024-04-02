@@ -1,6 +1,7 @@
 import {useCallback} from "react";
 
 export const updateStorage = (data, testId) => {
+    if (!testId) return;
     window.localStorage.setItem(`test-${testId}-data`, JSON.stringify(data));
 }
 
@@ -23,17 +24,15 @@ export const getInitialStorageData = (type, testId) => {
 }
 
 export const getCurrentTestId = () => {
-    const id = window.localStorage.getItem('testId');
-    if (!id) {
-        let randomString = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-        for (let i = 0; i < 5; i++) {
-            randomString += String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-        }
-        let newId = randomString;
-        window.localStorage.setItem('testId', newId);
-        return newId;
+    return window.localStorage.getItem('testId');
+}
+
+export const getIdForTest = () => {
+    let randomString = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+    for (let i = 0; i < 5; i++) {
+        randomString += String.fromCharCode(Math.floor(Math.random() * 26) + 65);
     }
-    return id;
+    return randomString;
 }
 
 export const modifyNodes = (nodes) => {
@@ -64,4 +63,8 @@ export const onChangeInput = (key, value, nodeId) => {
         if (node.id === nodeId) node.data[key] = value;
         return node;
     }))
+}
+
+export const generate = async (nodes, edges) => {
+
 }
