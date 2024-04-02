@@ -23,14 +23,14 @@ import {
     modifyNodes
 } from "../tools/functions.js";
 import Sidebar from "./Sidebar.jsx";
+import FlowWithProvider from "./FlowWithProvider.jsx";
 
 const initialNodes = getInitialStorageData('nodes');
 const initialEdges = getInitialStorageData('edges');
 const nodeTypes = {StartNode, ClickNode, FocusNode, TimeoutNode, InputNode, ScriptNode, ChoiceNode};
 
 function App() {
-    const connectingNodeId = useRef(null);
-    const {screenToFlowPosition} = useReactFlow();
+
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
     const [testId, setTestId] = useState(getCurrentTestId());
@@ -60,69 +60,22 @@ function App() {
 
     }, [nodes, edges]);
 
-    const onConnect = useCallback(
-        (params) => {
-            if (params.source === params.target) return;
-            connectingNodeId.current = null;
-            setEdges((eds) => addEdge(params, eds))
-        },
-        [],
-    );
-
-    const onConnectStart = useCallback((_, {nodeId}) => connectingNodeId.current = nodeId, []);
-
-    const onConnectEnd = useCallback(
-        (event) => {
-            if (!connectingNodeId.current) return;
-
-            const targetIsPane = event.target.classList.contains('react-flow__pane');
-
-            if (targetIsPane) {
-                const id = getId();
-                // we need to remove the wrapper bounds, in order to get the correct position
-                const newNode = {
-                    id,
-                    type: 'ChoiceNode',
-                    position: screenToFlowPosition({
-                        x: event.clientX,
-                        y: event.clientY,
-                    }),
-                    data: {},
-                    origin: [0.5, 0.0],
-                };
-
-                setNodes((nds) => modifyNodes(nds.concat(newNode)));
-                setEdges((eds) => eds.concat({id, source: connectingNodeId.current, target: id}));
-            }
-        },
-        [screenToFlowPosition],
-    );
-
     return (
         <div className="app">
-            {/*<Sidebar setTestId={setTestId}/>*/}
+            <Sidebar setTestId={setTestId}/>
             <div style={{width: '100%', height: '100vh'}}>
-                <ReactFlow
+                <FlowWithProvider
                     nodes={nodes}
                     edges={edges}
                     onNodesChange={onNodesChange}
                     onEdgesChange={onEdgesChange}
-                    onConnect={onConnect}
-                    onConnectStart={onConnectStart}
-                    onConnectEnd={onConnectEnd}
                     snapToGrid={true}
-                    nodeTypes={nodeTypes}
-                >
-                    <Controls/>
-                    <Background variant="" gap={12} size={1}/>
-                </ReactFlow>
+                    nodeTypes={nodeTypes}/>
             </div>
         </div>
     );
 }
 
 export default () => (
-    <ReactFlowProvider>
-        <App/>
-    </ReactFlowProvider>
+    <App/>
 );
