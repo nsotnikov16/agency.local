@@ -5,25 +5,25 @@
             <ul class="about__list">
                 <li class="about__item" data-aos="zoom-in-up">
                     <div class="about__item-img">
-                        <img data-img-svg data-src="<?= ASSETS_PATH ?>images/about/site.svg" />
+                        <span data-img-svg data-src="<?= ASSETS_PATH ?>images/about/site.svg" ></span>
                     </div>
                     <p class="about__item-text">Создадим уникальный, стильный и функциональный сайт</p>
                 </li>
                 <li class="about__item" data-aos="zoom-in-up">
                     <div class="about__item-img">
-                        <img data-img-svg data-src="<?= ASSETS_PATH ?>images/about/business.svg" />
+                        <span data-img-svg data-src="<?= ASSETS_PATH ?>images/about/business.svg" ></span>
                     </div>
                     <p class="about__item-text">Поможем развить ваш бизнес и достичь успеха в интернете</p>
                 </li>
                 <li class="about__item" data-aos="zoom-in-up">
                     <div class="about__item-img">
-                        <img data-img-svg data-src="<?= ASSETS_PATH ?>images/about/developers.svg" />
+                        <span data-img-svg data-src="<?= ASSETS_PATH ?>images/about/developers.svg" ></span>
                     </div>
                     <p class="about__item-text">Команда опытных разработчиков</p>
                 </li>
                 <li class="about__item" data-aos="zoom-in-up">
                     <div class="about__item-img">
-                        <img data-img-svg data-src="<?= ASSETS_PATH ?>images/about/completed-task-flatline.svg" />
+                        <span data-img-svg data-src="<?= ASSETS_PATH ?>images/about/completed-task-flatline.svg" ></span>
                     </div>
                     <p class="about__item-text">Знаем все технические аспекты разработки и продвижения сайта</p>
                 </li>

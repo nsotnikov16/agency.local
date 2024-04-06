@@ -7,7 +7,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <section class="section hero hero_inner">
     <div class="container">
         <h1 class="hero__title text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">Наши выполненные проекты</h1>
-        <img class="hero__img" style="max-width: 400px;" data-img-svg data-src="<?= ASSETS_PATH ?>images/about/group-presentation.svg" alt="">
+        <span class="hero__img" style="max-width: 400px;" data-img-svg data-src="<?= ASSETS_PATH
+        ?>images/about/group-presentation.svg" ></span>
     </div>
 </section>
 <section class="section projects">

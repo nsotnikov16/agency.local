@@ -3,7 +3,8 @@
 <header class="header">
     <div class="container">
         <div class="header__wrapper">
-            <a href="<?=getCityURL()?>/" class="logo header__logo not-effect"><img data-img-svg data-src="<?= ASSETS_PATH ?>/images/logo.svg"></a>
+            <a href="<?=getCityURL()?>/" class="logo header__logo not-effect"><span data-img-svg data-src="<?=
+                ASSETS_PATH ?>/images/logo.svg"></span></a>
             <div class="header__menu-wrapper">
                 <nav class="header__nav">
                     <a href="<?=getCityURL()?>/services/" class="header__nav-link <?= checkUrl('/services') ? 'link link_active' : ''?>">Услуги</a>

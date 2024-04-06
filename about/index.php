@@ -9,8 +9,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
         <div class="container">
             <h1 class="hero__title text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">О нашем
                 веб-агентстве</h1>
-            <img class="hero__img" data-img-svg data-src="<?= ASSETS_PATH ?>images/about/online-team-meeting.svg"
-                 alt="">
+            <span class="hero__img" data-img-svg data-src="<?= ASSETS_PATH ?>images/about/online-team-meeting.svg"
+            ></span>
         </div>
     </section>
     <section class="section about about_page">
@@ -19,8 +19,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
                 <div class="about__row">
                     <div class="about__row-left">
                         <h2>Кто мы?</h2>
-                        <img class="about__row-img" data-img-svg
-                             data-src="<?= ASSETS_PATH ?>images/about/group-presentation.svg" alt="">
+                        <span class="about__row-img" data-img-svg
+                              data-src="<?= ASSETS_PATH ?>images/about/group-presentation.svg"></span>
                     </div>
                     <div class="about__row-right content">
                         <p>ITRinity (Айтринити) - это молодая и развивающаяся компания, занимающаяся разработкой и
@@ -32,8 +32,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
                 <div class="about__row">
                     <div class="about__row-left">
                         <h2>Чем мы занимаемся?</h2>
-                        <img class="about__row-img" data-img-svg
-                             data-src="<?= ASSETS_PATH ?>images/about/office-work-flatline.svg" alt="">
+                        <span class="about__row-img" data-img-svg
+                              data-src="<?= ASSETS_PATH ?>images/about/office-work-flatline.svg"></span>
                     </div>
                     <div class="about__row-right content">
                         <p>Мы предлагаем широкий спектр услуг, начиная от разработки сайтов с нуля до оптимизации
@@ -47,8 +47,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
                 <div class="about__row">
                     <div class="about__row-left">
                         <h2>Наши преимущества</h2>
-                        <img class="about__row-img" data-img-svg
-                             data-src="<?= ASSETS_PATH ?>images/about/competition-flatline.svg" alt="">
+                        <span class="about__row-img" data-img-svg
+                              data-src="<?= ASSETS_PATH ?>images/about/competition-flatline.svg"></span>
                     </div>
                     <div class="about__row-right content">
                         <p>Включают в себя опыт работы с различными отраслями, глубокие знания в области веб-технологий

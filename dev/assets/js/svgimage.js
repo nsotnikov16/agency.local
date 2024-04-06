@@ -35,7 +35,7 @@ async function onLoadSvgImg(img) {
 }
 
 async function convertImgToSvg() {
-    const imagesSvg = document.querySelectorAll('img[data-img-svg]');
+    const imagesSvg = document.querySelectorAll('[data-img-svg]');
     if (imagesSvg.length) {
         for (let index = 0; index < imagesSvg.length; index++) {
             const element = imagesSvg[index];

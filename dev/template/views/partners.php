@@ -5,12 +5,13 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide scale">
                     <a target="_blank" class="partner not-effect" href="https://neiros.ru" data-aos="zoom-in" data-aos-duration="2000">
-                        <img data-img-svg class="partner__img" data-src="<?= ASSETS_PATH ?>images/icons/neiros.svg" alt="Neiros">
+                        <span data-img-svg class="partner__img" data-src="<?= ASSETS_PATH ?>images/icons/neiros.svg"></span>
                     </a>
                 </div>
                 <div class="swiper-slide scale">
                     <a target="_blank" class="partner partner_goreally not-effect" href="https://goreally.group" data-aos="zoom-in" data-aos-duration="2000">
-                        <img data-img-svg class="partner__img" data-src="<?= ASSETS_PATH ?>images/icons/goreally.svg" alt="GOREALLY GROUP">
+                        <span data-img-svg class="partner__img" data-src="<?= ASSETS_PATH ?>images/icons/goreally
+                        .svg" ></span>
                     </a>
                 </div>
             </div>
