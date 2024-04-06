@@ -12,7 +12,7 @@
                 <a  href="mailto:itrinityagency@yandex.ru">itrinityagency@yandex.ru</a>
                 <div class="social footer__social">
                     <a class="telegram not-effect" target="_blank" href="https://t.me/itrinityagency"><span data-img-svg data-src="<?= ASSETS_PATH
-                        ?>/images/icons/telegram.svg" /></span></a>
+                        ?>/images/icons/telegram.svg" ></span></a>
                     <?/*<a class="whatsapp not-effect" href="#"><img data-img-svg data-src="<?= ASSETS_PATH
                         ?>/images/icons/whatsapp.svg" /></a>
                     <a class="viber not-effect" href="#"><img data-img-svg data-src="<?= ASSETS_PATH
