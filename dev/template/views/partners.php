@@ -10,8 +10,7 @@
                 </div>
                 <div class="swiper-slide scale">
                     <a target="_blank" class="partner partner_goreally not-effect" href="https://goreally.group" data-aos="zoom-in" data-aos-duration="2000">
-                        <span data-img-svg class="partner__img" data-src="<?= ASSETS_PATH ?>images/icons/goreally
-                        .svg" ></span>
+                        <span data-img-svg class="partner__img" data-src="<?= ASSETS_PATH ?>images/icons/goreally.svg" ></span>
                     </a>
                 </div>
             </div>
