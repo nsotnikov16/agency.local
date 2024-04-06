@@ -7,12 +7,15 @@
         <div class="footer__wrapper">
             <div class="footer__contacts" id="contacts">
                 <a href="<?=getCityURL()?>/" class="logo not-effect"><img data-img-svg data-src="<?= ASSETS_PATH ?>/images/logo.svg"></a>
-                <a href="tel:+78005553535">8 (800) 555-35-35</a>
-                <a  href="mailto:test@test.ru">test@test.ru</a>
+                <a href="tel:+79822079055" rel="nofollow">8 (982) 207-90-55</a>
+                <a  href="mailto:itrinityagency@yandex.ru">itrinityagency@yandex.ru</a>
                 <div class="social footer__social">
-                    <a class="telegram not-effect" href="#"><img data-img-svg data-src="<?= ASSETS_PATH ?>/images/icons/telegram.svg" /></a>
-                    <a class="whatsapp not-effect" href="#"><img data-img-svg data-src="<?= ASSETS_PATH ?>/images/icons/whatsapp.svg" /></a>
-                    <a class="viber not-effect" href="#"><img data-img-svg data-src="<?= ASSETS_PATH ?>/images/icons/viber.svg" /></a>
+                    <a class="telegram not-effect" target="_blank" href="https://t.me/itrinityagency"><img data-img-svg data-src="<?= ASSETS_PATH
+                        ?>/images/icons/telegram.svg" /></a>
+                    <?/*<a class="whatsapp not-effect" href="#"><img data-img-svg data-src="<?= ASSETS_PATH
+                        ?>/images/icons/whatsapp.svg" /></a>
+                    <a class="viber not-effect" href="#"><img data-img-svg data-src="<?= ASSETS_PATH
+?>/images/icons/viber.svg" /></a>*/?>
                 </div>
             </div>
             <div class="footer__menu-wrapper">
