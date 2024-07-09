@@ -1,6 +1,7 @@
 <?php
 define('BG_2', true);
 $SEO_TITLE = 'Политика конфиденциальности | ITRinity';
+$breadcrumbs = ['/privacy-policy' => 'Политика конфиденциальности'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">

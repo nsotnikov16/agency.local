@@ -2,6 +2,7 @@
 define('BG_2', true);
 $SEO_TITLE = 'Виртуальный сервер | База знаний ITRinity';
 $SEO_DESCRIPTION = 'Узнайте, что такое виртуальный сервер и как он может быть полезен для вашего бизнеса. Мы расскажем о принципе работы виртуального сервера и его преимуществах по сравнению с обычным выделенным сервером.';
+$breadcrumbs = ['/info' => 'База знаний', '/info/virtual-server' => 'Виртуальный сервер'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">

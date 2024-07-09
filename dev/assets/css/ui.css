@@ -41,6 +41,13 @@ hr {
     margin-bottom: 2em;
 }
 
+.w-100 {
+    width: 100% !important;
+}
+
+.mw-100 {
+    max-width: 100% !important;
+}
 
 a:not(.not-effect), .link:not(.not-effect) {
     transition: all var(--transition-duration) ease;

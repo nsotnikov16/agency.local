@@ -2,6 +2,7 @@
 define('BG_2', true);
 $SEO_TITLE = 'Услуги агентства ITRinity для разработки и поддержки сайтов и CRM';
 $SEO_DESCRIPTION = 'Наша веб-студия предлагает широкий спектр услуг, включая разработку и поддержку сайтов, создание CRM-систем и многое другое. Мы поможем вам достичь ваших целей в онлайн-мире.';
+$breadcrumbs = ['/services' => 'Наши услуги'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">

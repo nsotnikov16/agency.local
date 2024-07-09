@@ -2,6 +2,7 @@
 define('BG_2', true);
 $SEO_TITLE = 'Хостинг и домен | База знаний ITRinity';
 $SEO_DESCRIPTION = 'Узнайте, что такое хостинг и домен и как они важны для вашего веб-сайта. Мы объясним, как хостинг обеспечивает доступность вашего сайта в Интернете, а домен - его уникальный адрес.';
+$breadcrumbs = ['/info' => 'База знаний', '/info/hosting-and-domain' => 'Хостинг и домен'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">

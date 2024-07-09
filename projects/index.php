@@ -2,6 +2,7 @@
 define('BG_2', true);
 $SEO_TITLE = 'Выполненные проекты | ITRinity';
 $SEO_DESCRIPTION = 'Познакомьтесь с нашими успешными проектами, которые мы разработали и поддерживаем. Мы гордимся нашей работой и стремимся к достижению ваших целей.';
+$breadcrumbs = ['/projects' => 'Проекты'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">
@@ -17,8 +18,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
             <li class="project project_easygoenglish" data-aos="zoom-in" data-aos-duration="2000">
                 <a href="https://easygoenglish.ru/" target="_blank" class="project__wrapper not-effect">
                     <div class="project__feat">
-                        <img class="project__img" loading="lazy" src="<?= ASSETS_PATH ?>images/projects/easygoenglish
-                        .png"  alt="EasyGoEnglish"/>
+                        <img class="project__img" loading="lazy" src="<?= ASSETS_PATH ?>images/projects/easygoenglish.png"  alt="EasyGoEnglish"/>
                     </div>
                     <div class="project__info">
                         <span class="project__title link">EasyGoEnglish</span> - курсы английского языка
