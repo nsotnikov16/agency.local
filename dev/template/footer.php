@@ -36,6 +36,7 @@
                 <nav class="footer__nav">
                     <span class="footer__nav-title">Кто мы</span>
                     <a href="<?= getCityURL() ?>/about/" class="footer__nav-link">О нас</a>
+                    <a href="<?= getCityURL() ?>/contacts/" class="footer__nav-link">Контакты</a>
                     <!-- <a href="" class="footer__nav-link">Сотрудничество</a> -->
                 </nav>
                 <nav class="footer__nav">
