@@ -1,7 +1,6 @@
 <? if (!empty($GLOBALS['breadcrumbs'])) : ?>
     <?
     $cnt = 1;
-    $domain = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
     $schema = '<script  type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -13,7 +12,7 @@
           "position": 1,
           "item":
           {
-           "@id": "' . $domain . '",
+           "@id": "' . CURRENT_URL . '",
            "name": "Itrinity"
            }
          },
@@ -39,7 +38,7 @@
                             "position": ' . $cnt + 1 . ',
                             "item":
                             {
-                             "@id": "' . $domain . $link . '",
+                             "@id": "' . CURRENT_URL . $link . '",
                              "name": "' . $title . '"
                              }
                         }' ?>

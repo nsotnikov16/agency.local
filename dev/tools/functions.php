@@ -39,3 +39,10 @@ function getFirstURLSegment(): string
 
     return '';
 }
+
+function getHrefForPhone($phone) {
+    $replace = preg_replace('/[^0-9]+/', '', $phone);
+    if ($replace[0] === '8') $replace[0] = '7';
+    if ($replace[0] === '7') $replace = '+' . $replace;
+    return 'tel:' . $replace;
+}

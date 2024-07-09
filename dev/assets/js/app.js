@@ -93,7 +93,7 @@ function lazyLoad() {
     lazyImages.forEach(img => {
         //img.setAttribute('src', '/dev/assets/images/load.gif');
         function showImg() {
-            const {top} = img.getBoundingClientRect();
+            const { top } = img.getBoundingClientRect();
             if (top >= window.innerHeight - 100) return;
             const src = img.getAttribute('data-lazy-src');
             if (!src) return;
@@ -218,7 +218,7 @@ async function request(method = 'GET', url, data) {
 
         const options = {
             method,
-            ...method != 'GET' && data ? {body} : ''
+            ...method != 'GET' && data ? { body } : ''
         }
 
         if (data instanceof FormData === false) {
@@ -232,44 +232,84 @@ async function request(method = 'GET', url, data) {
         result = await response.json();
 
     } catch (error) {
-        result = {success: false, error: error.message};
+        result = { success: false, error: error.message };
     }
 
     return result;
 }
 
 
-const formStartProject = document.querySelector('[data-form-project]');
-const successStartProject = document.querySelector('[data-project-success]');
-const failedStartProject = document.querySelector('[data-project-failed]');
-const formFields = document.querySelectorAll('input, textarea');
+function setFormLogic({ type, loadingText, url, func }) {
+    if (!type) return;
+    const form = document.querySelector(`[data-form-${type}]`);
+    if (!form) return
+    const success = document.querySelector(`[data-${type}-success]`);
+    const failed = document.querySelector(`[data-${type}-failed]`);
+    const formFields = Array.from(form.querySelectorAll('input:not([type="hidden"]), textarea'));
 
-if (formFields.length) {
-    formFields.forEach(item => {
-        item.addEventListener('input', () => item.classList.add('form__validity'));
-    })
+    if (formFields.length) {
+        formFields.forEach(item => {
+            item.addEventListener('input', () => item.classList.add('form__validity'));
+        })
+    }
+
+    if (!success) console.error('Отсутствует блок успешного ответа для ' + type);
+    if (!failed) console.error('Отсутствует блок ошибки для ' + type);
+
+    if (form && success && failed) {
+        const btn = form.querySelector('.form__btn');
+        const btnDefaultText = btn.textContent;
+        if (typeof func === 'function') func(form, success, failed, formFields)
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            try {
+                btn.textContent = loadingText ?? 'Отправляем...';
+                failed.classList.add('d-none');
+                const result = await request('POST', url, new FormData(e.target));
+                if (!result.status) throw new Error('');
+                success.classList.remove('d-none');
+                form.reset();
+                Array.from(form.elements).forEach(item => item.classList.remove('form__validity'));
+            } catch (error) {
+                failed.classList.remove('d-none');
+            } finally {
+                arrPopups[`form-${type}-result`].open();
+                btn.textContent = btnDefaultText;
+            }
+        })
+    }
 }
 
-if (formStartProject && successStartProject && failedStartProject) {
-    const btn = formStartProject.querySelector('.form__btn');
-    formStartProject.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        try {
-            btn.textContent = 'Отправляем...';
-            failedStartProject.classList.add('d-none');
-            const result = await request('POST', '/dev/api/project.php', new FormData(e.target));
-            if (!result.status) throw new Error('');
-            successStartProject.classList.remove('d-none');
-            formStartProject.reset();
-            console.log(formStartProject.elements);
-            Array.from(formStartProject.elements).forEach(item => item.classList.remove('form__validity'));
-        } catch (error) {
-            failedStartProject.classList.remove('d-none');
-        } finally {
-            arrPopups['form-start-result'].open();
-            btn.textContent = 'Отправить';
+setFormLogic({ type: 'project', loadingText: 'Отправляем...', url: '/dev/api/project.php' });
+setFormLogic(
+    {
+        type: 'consultant',
+        loadingText: 'Отправляем...',
+        url: '/dev/api/consultant.php',
+        func: (form, success, failed, formFields) => {
+            const arrRadio = formFields.filter(f => f.name === 'method' && f.value);
+            arrRadio.forEach((item, index) => {
+                item.addEventListener('change', () => {
+                    arrRadio.forEach((itemB, indexB) => {
+                        const needInput = formFields.find(f => f.name == itemB.value);
+                        needInput.required = item.checked;
+                        if (index !== indexB) {
+                            itemB.checked = false;
+                            needInput.required = false;
+                        } 
+                        setRequiredLabel(needInput);
+                    })
+                })
+            })
         }
-    })
+    }
+);
+
+const setRequiredLabel = (input) => {
+    const label = input.labels?.[0]
+    if (!label) return;
+    const reqElement = label.querySelector('[data-required]');
+    input.required ? (reqElement.textContent) = '*' : (reqElement.textContent = '')
 }
 
 function createMatrixEffect() {

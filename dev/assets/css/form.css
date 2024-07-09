@@ -47,6 +47,20 @@
     height: 60px;
 }
 
+.form__checkbox {
+    font-size: 18px;
+}
+
+.form_consultant .form__checkbox {
+    margin-right: 15px;
+}
+
+.form_consultant .form__checkboxes {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
 .form__textarea {
     min-width: 600px;
     height: 120px;
@@ -59,6 +73,9 @@
     display: block;
 }
 
+.form_consultant .form__btn {
+    margin-top: 20px;
+}
 
 .form__bottom {
     display: flex;
@@ -103,6 +120,11 @@
     }
 
     .form__policy {
+        margin: 0;
+    }
+    
+
+    .form_consultant .form__checkboxes {
         margin: 0;
     }
 

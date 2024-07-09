@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <section class="section services services_page">
     <div class="container">
         <div class="content mb-2">
-            <p style="font-style:italic; font-weight: 500">* Обращаем Ваше внимание, что расценки на сайте <u>предварительные</u>.<br>* Итоговая сумма рассчитывается после оценки согласованного задания.</p>
+            <p style="font-style:italic; font-weight: 500">* Обращаем Ваше внимание, что расценки на сайте <u>предварительные</u>.<br>* Итоговая сумма рассчитывается после оценки согласованной задачи.</p>
         </div>
         <div class="services__wrapper">
             <ul class="services__list">

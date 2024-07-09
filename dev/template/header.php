@@ -9,8 +9,8 @@
                 <nav class="header__nav">
                     <a href="<?= getCityURL() ?>/services/" class="header__nav-link <?= checkUrl('/services') ? 'link link_active' : '' ?>">Услуги</a>
                     <a href="<?= getCityURL() ?>/projects/" class="header__nav-link <?= checkUrl('/projects') ? 'link link_active' : '' ?>">Портфолио</a>
-                    <a href="#contacts" class="header__nav-link header__nav-link_contacts">Контакты</a>
-                    <a href="<?= getCityURL() ?>/start/" class="header__nav-project btn not-effect">Начать проект</a>
+                    <a href="<?= getCityURL() ?>/contacts/" class="header__nav-link <?= checkUrl('/contacts') ? 'link link_active' : '' ?>">Контакты</a>
+                    <a href="<?= getCityURL() ?>/start/" class="header__nav-project btn not-effect">Обсудить проект</a>
                 </nav>
             </div>
 

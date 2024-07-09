@@ -30,12 +30,12 @@
     </div>
 </section>
 
-<div class="popup popup_result" id="form-start-result">
+<div class="popup popup_result" id="form-project-result">
     <div class="popup__container">
         <div class="popup__content">
             <div data-project-failed class="content d-none">
                 <h3>Что-то пошло не так, попробуйте снова</h3>
-                <p>Если ошибка повторится, сообщите нам по email <a href="mailto:example@example.com">example@example.com</a></p>
+                <p>Если ошибка повторится, сообщите нам по email <a href="mailto:<?= EMAIL ?>"><?= EMAIL?></a></p>
             </div>
             <div data-project-success class="content d-none">
                 <h2 class="section__title">Спасибо за обращение!</h2>
