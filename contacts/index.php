@@ -1,6 +1,7 @@
 <?php
 define('BG_2', true);
 $SEO_TITLE = 'Контакты агентства Itrinity';
+$SEO_DESCRIPTION = 'Контактная информация агентства Itrinity в Сургуте и других городах России';
 $breadcrumbs = ['/contacts' => 'Контакты'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
