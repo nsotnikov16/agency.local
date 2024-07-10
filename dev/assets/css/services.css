@@ -16,14 +16,15 @@
 }
 
 .service__img {
-    height: 320px;
+    height: 285px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     background: white;
+    padding: 25px;
 }
 
 .service__info {
-    padding: 30px 20px;
+    padding: 20px;
 }
 
 .service__name {
@@ -45,6 +46,7 @@
 .services_page .service__img {
     max-width: 350px;
     margin-right: 5%;
+    padding: initial;
 }
 
 .services_page .service__name {

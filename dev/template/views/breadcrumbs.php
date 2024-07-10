@@ -13,7 +13,7 @@
           "item":
           {
            "@id": "' . CURRENT_URL . '",
-           "name": "Itrinity"
+           "name": "ITRinity"
            }
          },
     ' ?>
@@ -21,7 +21,7 @@
         <div class="container">
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
-                    <a href="/" class="breadcrumbs__link not-effect">Itrinity</a>
+                    <a href="/" class="breadcrumbs__link not-effect">ITRinity</a>
                 </li>
                 <? foreach ($GLOBALS['breadcrumbs'] as $link => $title) : ?>
                     <li class="breadcrumbs__item">

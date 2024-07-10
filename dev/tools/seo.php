@@ -69,9 +69,9 @@ function getCanonical() {
 
 if (!isset($GLOBALS['SEO_TITLE'])) {
     $citySEO = getCitySEO();
-    $GLOBALS['SEO_TITLE'] = 'Купить сайт на заказ, разработка и продвижение сайта ' . (!empty($citySEO) ? ('в ' . $citySEO[1]) : '') . '| Itrinity Веб-студия';
+    $GLOBALS['SEO_TITLE'] = 'Купить сайт на заказ, разработка и продвижение сайта ' . (!empty($citySEO) ? ('в ' . $citySEO[1]) : '') . '| Itrinity (Айтринити) Веб-студия';
 }
 
 if (!isset($GLOBALS['SEO_DESCRIPTION'])) {
-    $GLOBALS['SEO_DESCRIPTION'] = 'ITRinity - Веб-студия для разработки и поддержки сайтов, CRM';
+    $GLOBALS['SEO_DESCRIPTION'] = 'ITRinity (Айтринити) - Веб-студия для разработки и поддержки сайтов, CRM';
 }

@@ -1,6 +1,6 @@
 <?php
 define('BG_2', true);
-$SEO_TITLE = 'База знаний | ITRinity';
+$SEO_TITLE = 'База знаний | ITRinity (Айтринити)';
 $breadcrumbs = ['/info' => 'База знаний'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>

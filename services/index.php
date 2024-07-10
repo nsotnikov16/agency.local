@@ -1,13 +1,13 @@
 <?php
 define('BG_2', true);
-$SEO_TITLE = 'Услуги агентства ITRinity для разработки и поддержки сайтов и CRM';
+$SEO_TITLE = 'Качественная разработка сайтов от 20 000 руб &#9989;&#128072;';
 $SEO_DESCRIPTION = 'Наша веб-студия предлагает широкий спектр услуг, включая разработку и поддержку сайтов, создание CRM-систем и многое другое. Мы поможем вам достичь ваших целей в онлайн-мире.';
 $breadcrumbs = ['/services' => 'Наши услуги'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">
     <div class="container">
-        <h1 class="hero__title text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">Услуги для разработки и поддержки веб-сайтов, CRM</h1>
+        <h1 class="hero__title text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">Услуги по разработке и поддержке веб-сайтов, CRM</h1>
         <span class="hero__img" style="max-width: 400px;" data-img-svg data-src="<?= ASSETS_PATH
         ?>images/services/entrepreneurs-flatline.svg"></span>
     </div>

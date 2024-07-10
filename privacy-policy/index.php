@@ -1,6 +1,6 @@
 <?php
 define('BG_2', true);
-$SEO_TITLE = 'Политика обработки персональных данных | ITRinity';
+$SEO_TITLE = 'Политика обработки персональных данных | ITRinity (Айтринити)';
 $breadcrumbs = ['/privacy-policy' => 'Политика обработки персональных данных'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>

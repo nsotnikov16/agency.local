@@ -1,6 +1,6 @@
 <?php
 define('BG_2', true);
-$SEO_TITLE = 'CMS | База знаний ITRinity';
+$SEO_TITLE = 'CMS | База знаний ITRinity (Айтринити)';
 $SEO_DESCRIPTION = 'Узнайте, что такое CMS система (система управления контентом) и как она помогает вам управлять и обновлять ваш веб-сайт. Мы расскажем о преимуществах использования CMS системы и ее ключевых функциях.';
 $breadcrumbs = ['/info' => 'База знаний', '/info/cms' => 'CMS'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>

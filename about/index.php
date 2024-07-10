@@ -1,14 +1,13 @@
 <?php
 define('BG_2', true);
-$SEO_TITLE = 'О нас | ITRinity';
-$SEO_DESCRIPTION = 'Узнайте больше о нашем веб-агентстве, нашей команде и нашем опыте. Мы стремимся к качеству, инновациям и удовлетворению потребностей наших клиентов.';
+$SEO_TITLE = 'О нас | ITRinity (Айтринити)';
+$SEO_DESCRIPTION = 'Узнайте больше о нашей веб-студии, нашей команде и нашем опыте. Мы стремимся к качеству, инновациям и удовлетворению потребностей наших клиентов.';
 $breadcrumbs = ['/about' => 'О нас'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
     <section class="section hero hero_inner">
         <div class="container">
-            <h1 class="hero__title text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">О нашем
-                веб-агентстве</h1>
+            <h1 class="hero__title text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">О нашей веб-студии</h1>
             <span class="hero__img" data-img-svg data-src="<?= ASSETS_PATH ?>images/about/online-team-meeting.svg"
             ></span>
         </div>

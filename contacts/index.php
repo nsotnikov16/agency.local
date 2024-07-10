@@ -1,13 +1,13 @@
 <?php
 define('BG_2', true);
-$SEO_TITLE = 'Контакты агентства Itrinity';
-$SEO_DESCRIPTION = 'Контактная информация агентства Itrinity в Сургуте и других городах России';
+$SEO_TITLE = 'Контакты веб-студии ITRinity (Айтринити)';
+$SEO_DESCRIPTION = 'Контактная информация веб-студии ITRinity (Айтринити) в Сургуте и других городах России';
 $breadcrumbs = ['/contacts' => 'Контакты'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section contacts">
     <div class="container">
-        <h1 class="hero__title text-center mw-100" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">Контакты</h1>
+        <h1 class="hero__title text-center mw-100">Контакты</h1>
         <div class="contacts__container">
             <ul class="contacts__list">
                 <li class="contacts__list-item">
