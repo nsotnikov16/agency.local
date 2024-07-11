@@ -13,6 +13,11 @@
                         <span data-img-svg class="partner__img" data-src="<?= ASSETS_PATH ?>images/icons/goreally.svg" ></span>
                     </a>
                 </div>
+                <div class="swiper-slide scale">
+                    <a target="_blank" class="partner partner_exchange not-effect" href="https://exchange365.ru/" data-aos="zoom-in" data-aos-duration="2000">
+                        <span data-img-svg class="partner__img" data-src="<?= ASSETS_PATH ?>images/icons/exchange.svg" ></span>
+                    </a>
+                </div>
             </div>
             <div class="swiper-scrollbar"></div>
         </div>

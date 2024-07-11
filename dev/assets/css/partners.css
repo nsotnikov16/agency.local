@@ -19,6 +19,10 @@
     transform: translateY(6px);
 }
 
+.partner_exchange .partner__img {
+    transform: translateY(8px);
+}
+
 .partners .swiper-scrollbar {
     position: static;
     margin-top: 15px;
