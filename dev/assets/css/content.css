@@ -1,4 +1,5 @@
-.content p, .content li {
+.content p,
+.content li {
     margin-bottom: 10px;
     font-size: 25px;
     line-height: 1.4;
@@ -18,7 +19,8 @@
     list-style-type: disc;
 }
 
-.content ul, .content ol {
+.content ul,
+.content ol {
     padding: 10px 0 0 25px;
 }
 
@@ -29,6 +31,7 @@ figure {
 figure img {
     width: 100%;
     border-radius: 8px;
+    border: 1px solid var(--body-color);
 }
 
 figcaption {
@@ -37,16 +40,37 @@ figcaption {
     margin-top: 10px;
 }
 
+blockquote {
+    margin: 15px 0;
+    padding: 10px 15px;
+    border: 1px solid var(--body-color);
+    font-style: italic;
+    font-size: 14px;
+    border-radius: 5px;
+    max-width: 800px;
+    margin-left: auto;
+}
+
+blockquote p {
+    font-size: inherit !important;
+}
+
+blockquote footer {
+    text-align: end;
+}
+
 @media(max-width: 767px) {
     .content h2 {
         font-size: 32px;
         margin-bottom: 25px;
     }
+
     .content h3 {
         font-size: 20px;
     }
 
-    .content p, .content li {
+    .content p,
+    .content li {
         font-size: 16px;
     }
 }

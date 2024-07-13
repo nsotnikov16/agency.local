@@ -28,7 +28,7 @@
                     <span class="footer__nav-title">Что мы делаем</span>
                     <a href="<?= getCityURL() ?>/services/" class="footer__nav-link">Услуги</a>
                     <a href="<?= getCityURL() ?>/projects/" class="footer__nav-link">Проекты</a>
-                    <!-- <a href="<?= getCityURL() ?>/autotest/" class="footer__nav-link">Конструктор автотестов</a> -->
+                    <a href="<?= getCityURL() ?>/autotest/" class="footer__nav-link">Конструктор автотестов</a>
                     <!-- <a href="" class="footer__nav-link">Работа с клиентом</a> -->
                     <a href="<?= getCityURL() ?>/technologies/" class="footer__nav-link">Технологии</a>
                     <!-- <a href="" class="footer__nav-link">Обучение</a>
