@@ -1,0 +1,23 @@
+.nav-content {
+    border: 1px solid var(--body-color);
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-content ul, .nav-content ol {
+    padding: 0 0 0 20px;
+    margin: 0 0 10px 0;
+}
+
+.nav-content ul {
+    list-style-type: disc;
+}
+
+.nav-content li {
+    margin-bottom: 15px;
+}
+
+.nav-content ol li:first-child {
+    margin-top: 15px;
+}

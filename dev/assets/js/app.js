@@ -355,3 +355,12 @@ function createMatrixEffect() {
 }
 
 if (document.querySelector('.hero__matrix')) createMatrixEffect();
+
+/* Спойлеры */
+const spoilers = document.querySelectorAll('.spoiler')
+if (spoilers.length > 0) {
+    spoilers.forEach(spoiler => {
+        const top = spoiler.querySelector('.spoiler__top')
+        if (top) top.addEventListener('click', () => spoiler.classList.toggle('spoiler_open'))
+    })
+}

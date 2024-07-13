@@ -1,0 +1,101 @@
+.spoiler {
+    border-bottom: 1px solid var(--body-color);
+}
+
+.spoiler:first-child {
+    border-top: 1px solid var(--body-color);
+}
+
+.spoiler__top {
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.spoiler__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    margin-right: 20px;
+}
+
+.spoiler__btn {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transition: -webkit-transform 0.3s ease-in;
+    transition: -webkit-transform 0.3s ease-in;
+    -o-transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+.spoiler__btn::before, .spoiler__btn::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--body-color);
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+.spoiler__btn::after {
+    -webkit-transform: rotate(90deg) translateX(-2px);
+    -ms-transform: rotate(90deg) translateX(-2px);
+    transform: rotate(90deg) translateX(-2px);
+}
+
+.spoiler__bottom {
+    padding: 0 20px;
+    max-height: 0;
+    -webkit-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    transform: translateY(-10%);
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.25s ease, -webkit-transform 0.25s ease-in-out;
+    transition: opacity 0.25s ease, -webkit-transform 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease, transform 0.25s ease-in-out;
+    transition: opacity 0.25s ease, transform 0.25s ease-in-out;
+    transition: opacity 0.25s ease, transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+
+.spoiler_open .spoiler__bottom {
+    max-height: initial;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    overflow: visible;
+    opacity: 1;
+    padding-bottom: 10px;
+}
+
+.spoiler_open .spoiler__top {
+    padding-bottom: 10px;
+}
+
+.spoiler_open .spoiler__btn {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.spoiler_open .spoiler__btn::after {
+    opacity: 0;
+}
+
+.spoiler .content {
+    padding-bottom: 30px;
+}
+
+@media(max-width: 767px) {
+    .spoiler__name {
+        font-size: 18px;
+    }
+}

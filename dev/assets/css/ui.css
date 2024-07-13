@@ -49,14 +49,20 @@ hr {
     max-width: 100% !important;
 }
 
-a:not(.not-effect), .link:not(.not-effect) {
+.pt-0 {
+    padding-top: 0;
+}
+
+a:not(.not-effect),
+.link:not(.not-effect) {
     transition: all var(--transition-duration) ease;
     text-underline-offset: 0.15em;
     color: inherit;
     position: relative;
 }
 
-a:not(.not-effect)::before, .link:not(.not-effect)::before {
+a:not(.not-effect)::before,
+.link:not(.not-effect)::before {
     content: "";
     display: block;
     position: absolute;
@@ -69,7 +75,8 @@ a:not(.not-effect)::before, .link:not(.not-effect)::before {
     pointer-events: none;
 }
 
-a:not(.not-effect)::after, .link:not(.not-effect)::after {
+a:not(.not-effect)::after,
+.link:not(.not-effect)::after {
     content: "";
     display: block;
     position: absolute;
@@ -90,11 +97,14 @@ a:not(.not-effect)::after, .link:not(.not-effect)::after {
     background: currentColor;
 }
 
-a:not(.not-effect):hover, .link:not(.not-effect):hover {
+a:not(.not-effect):hover,
+.link:not(.not-effect):hover {
     outline: 0;
 }
 
-a:not(.not-effect):hover::after, .link:not(.not-effect):hover::after, .link_active.link:not(.not-effect)::after {
+a:not(.not-effect):hover::after,
+.link:not(.not-effect):hover::after,
+.link_active.link:not(.not-effect)::after {
     -webkit-transform-origin: left;
     -ms-transform-origin: left;
     transform-origin: left;
@@ -113,6 +123,7 @@ a:not(.not-effect):hover::after, .link:not(.not-effect):hover::after, .link_acti
     font-weight: 700;
     transform: scale(1);
     transition: all var(--transition-duration) ease-in-out;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -143,8 +154,15 @@ body::-webkit-scrollbar-thumb {
     transform: scale(1.05);
 }
 
-.btn {
-    cursor: pointer;
+.btn_autotest {
+    width: 300px;
+    height: 60px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 @media (max-width: 767px) {
@@ -163,4 +181,8 @@ body::-webkit-scrollbar-thumb {
         opacity: 1;
         transform: translateY(1400%);
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }
