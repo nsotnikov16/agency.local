@@ -2,7 +2,7 @@
 define('BG_2', true);
 $SEO_TITLE = 'Выполненные проекты | ITRinity (Айтринити)';
 $SEO_DESCRIPTION = 'Познакомьтесь с нашими успешными проектами, которые мы разработали и поддерживаем. Мы гордимся нашей работой и стремимся к достижению ваших целей.';
-$breadcrumbs = ['/projects' => 'Проекты'];
+$breadcrumbs = ['/projects/' => 'Проекты'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">

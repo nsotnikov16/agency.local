@@ -2,7 +2,7 @@
 define('BG_2', true);
 $SEO_TITLE = 'О нас | ITRinity (Айтринити)';
 $SEO_DESCRIPTION = 'Узнайте больше о нашей веб-студии, нашей команде и нашем опыте. Мы стремимся к качеству, инновациям и удовлетворению потребностей наших клиентов.';
-$breadcrumbs = ['/about' => 'О нас'];
+$breadcrumbs = ['/about/' => 'О нас'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
     <section class="section hero hero_inner">

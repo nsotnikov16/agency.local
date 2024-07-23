@@ -1,4 +1,5 @@
 <?
+define('CORE_ON', true);
 define('TEMPLATE_PATH', '/dev/template/');
 define('ASSETS_PATH', '/dev/assets/');
 define('FULL_ASSETS_PATH', $_SERVER['DOCUMENT_ROOT'] . ASSETS_PATH);

@@ -2,7 +2,7 @@
 define('BG_2', true);
 $SEO_TITLE = 'CRM система | База знаний ITRinity (Айтринити)';
 $SEO_DESCRIPTION = 'Узнайте, что такое CRM система и как она может улучшить эффективность вашего бизнеса. Мы объясним основные принципы и преимущества CRM системы для управления взаимоотношениями с клиентами.';
-$breadcrumbs = ['/info' => 'База знаний', '/info/crm' => 'CRM'];
+$breadcrumbs = ['/info/' => 'База знаний', '/info/crm/' => 'CRM'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">

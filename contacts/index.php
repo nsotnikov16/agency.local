@@ -2,7 +2,7 @@
 define('BG_2', true);
 $SEO_TITLE = 'Контакты веб-студии ITRinity (Айтринити)';
 $SEO_DESCRIPTION = 'Контактная информация веб-студии ITRinity (Айтринити) в Сургуте и других городах России';
-$breadcrumbs = ['/contacts' => 'Контакты'];
+$breadcrumbs = ['/contacts/' => 'Контакты'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section contacts">

@@ -2,7 +2,7 @@
 define('BG_2', true);
 $SEO_TITLE = 'Качественная разработка сайтов от 20 000 руб &#9989;&#128072;';
 $SEO_DESCRIPTION = 'Наша веб-студия предлагает широкий спектр услуг, включая разработку и поддержку сайтов, создание CRM-систем и многое другое. Мы поможем вам достичь ваших целей в онлайн-мире.';
-$breadcrumbs = ['/services' => 'Наши услуги'];
+$breadcrumbs = ['/services/' => 'Наши услуги'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php'; ?>
 <? getHeader(); ?>
 <section class="section hero hero_inner">

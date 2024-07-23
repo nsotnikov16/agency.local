@@ -3,7 +3,7 @@ define('BG_2', true);
 define('HIDE_LEAD_SECTION', true);
 $SEO_TITLE = 'Конструктор автотестов - предназначение, инструкция пользования';
 $SEO_DESCRIPTION = '&#9658;Конструктор автотестов &#9757; Что это за инструмент и почему его так любят тестировщики';
-$breadcrumbs = ['/autotest' => 'Конструктор автотестов'];
+$breadcrumbs = ['/autotest/' => 'Конструктор автотестов'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
 ?>
 <?php getHeader(); ?>
