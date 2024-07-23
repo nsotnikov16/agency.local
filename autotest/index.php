@@ -8,7 +8,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
 ?>
 <?php getHeader(); ?>
 <section class="section hero hero_inner">
-    <div class="container" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">
+    <div class="container">
         <h1 class="hero__title text-center">Конструктор автотестов</h1>
         <a href="/autotest/constructor/" class="btn btn_autotest not-effect scale">Попробовать</a>
     </div>
