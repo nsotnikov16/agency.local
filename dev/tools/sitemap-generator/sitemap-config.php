@@ -3,7 +3,7 @@ if (!defined('CORE_ON')) die;
 return array(
     // Site to crawl and create a sitemap for.
     // <Syntax> https://www.your-domain-name.com/ or http://www.your-domain-name.com/
-    "SITE_URL" => CURRENT_URL,
+    "SITE_URL" => 'https://itrinity.agency',
 
     // Boolean for crawling external links.
     // <Example> *Domain = https://www.student-laptop.nl* , *Link = https://www.google.com* <When false google will not be crawled>
